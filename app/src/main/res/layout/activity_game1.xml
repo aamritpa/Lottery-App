@@ -4,785 +4,942 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#455C5A"
+    android:background="#B0D5C7"
     android:foregroundGravity="center"
     tools:context=".Game1">
 
 
-    <GridLayout
-        android:id="@+id/gridView2"
-        android:layout_width="70dp"
-        android:layout_height="558dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="48dp"
-        android:background="@android:color/white"
-        android:foregroundGravity="center"
-        android:padding="10dp"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/number1"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="1"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800sp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/number2"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="2"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number3"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="3"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            <GridLayout
+                android:id="@+id/gridView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="20dp"
+                android:background="#B0D5C7"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/number4"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="4"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:inputType="number"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number5"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="5"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:inputType="text"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number6"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="6"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:inputType="number"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number7"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="7"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:inputType="number"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="4"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number8"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="8"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="5"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number9"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="9"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="6"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/number10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="10"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/number7"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="7"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
-    </GridLayout>
+                <TextView
+                    android:id="@+id/number8"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="8"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number9"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="9"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="10"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#B0D5C7"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gridView2"
+                app:layout_constraintStart_toEndOf="@+id/gridView2"
+                app:layout_constraintTop_toTopOf="@+id/gridView2"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/number11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="11"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="12"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="13"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="14"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="15"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="16"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="17"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="18"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="19"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="20"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#B0D5C7"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gridView3"
+                app:layout_constraintStart_toEndOf="@+id/gridView3"
+                app:layout_constraintTop_toTopOf="@+id/gridView3"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/number21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="21"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="22"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="23"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="24"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="25"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="26"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="27"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="28"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="29"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="30"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#B0D5C7"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gridView4"
+                app:layout_constraintStart_toEndOf="@+id/gridView4"
+                app:layout_constraintTop_toTopOf="@+id/gridView4"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/number31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="31"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="32"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="33"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="34"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="35"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="36"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="37"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="38"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="39"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="40"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#B0D5C7"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gridView5"
+                app:layout_constraintStart_toEndOf="@+id/gridView5"
+                app:layout_constraintTop_toTopOf="@+id/gridView4"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/number41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="41"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="42"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="43"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="44"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="45"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="46"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="47"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="48"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="39"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/number50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:background="#C0C0C0"
+                    android:foregroundGravity="center"
+                    android:onClick="chooseNumber"
+                    android:padding="15sp"
+                    android:text="50"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </GridLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
     <GridLayout
-        android:id="@+id/gridView6"
-        android:layout_width="70dp"
-        android:layout_height="558dp"
-        android:layout_gravity="center"
+        android:id="@+id/gridView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:foregroundGravity="center"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/gridView5"
-        app:layout_constraintStart_toEndOf="@+id/gridView5"
-        app:layout_constraintTop_toTopOf="@+id/gridView4"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574">
+
 
         <TextView
-            android:id="@+id/number41"
+            android:id="@+id/selectedNumber1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="41"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:background="#256B85"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="10sp"
+            android:text=""
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/number42"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="42"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number43"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="43"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number44"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="44"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number45"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="45"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number46"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="46"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number47"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="47"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="48"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number49"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="39"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number50"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="50"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-    </GridLayout>
-
-    <GridLayout
-        android:id="@+id/gridView4"
-        android:layout_width="70dp"
-        android:layout_height="558dp"
-        android:layout_gravity="center"
-        android:background="@android:color/white"
-        android:foregroundGravity="center"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/gridView3"
-        app:layout_constraintStart_toEndOf="@+id/gridView3"
-        app:layout_constraintTop_toTopOf="@+id/gridView3"
-        app:layout_constraintVertical_bias="1.0">
-
-        <TextView
-            android:id="@+id/number21"
+            android:id="@+id/selectedNumber2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="21"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_column="1"
+            android:background="#256B85"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="10sp"
+            android:text=""
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/number22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="22"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="23"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="24"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="25"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="26"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="27"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="28"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="29"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="30"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-    </GridLayout>
-
-    <GridLayout
-        android:id="@+id/gridView3"
-        android:layout_width="71dp"
-        android:layout_height="558dp"
-        android:layout_gravity="center"
-        android:background="@android:color/white"
-        android:foregroundGravity="center"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/gridView2"
-        app:layout_constraintStart_toEndOf="@+id/gridView2"
-        app:layout_constraintTop_toTopOf="@+id/gridView2"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/number11"
+            android:id="@+id/selectedNumber3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="11"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_column="2"
+            android:background="#256B85"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:padding="10sp"
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/number12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="12"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="13"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="14"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="15"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="16"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="17"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="18"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="19"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="20"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-    </GridLayout>
-
-    <GridLayout
-        android:id="@+id/gridView5"
-        android:layout_width="70dp"
-        android:layout_height="558dp"
-        android:layout_gravity="center"
-        android:background="@android:color/white"
-        android:foregroundGravity="center"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/gridView4"
-        app:layout_constraintStart_toEndOf="@+id/gridView4"
-        app:layout_constraintTop_toTopOf="@+id/gridView4"
-        app:layout_constraintVertical_bias="1.0">
-
-        <TextView
-            android:id="@+id/number31"
+            android:id="@+id/selectedNumber4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="31"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_column="3"
+            android:background="#256B85"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:padding="10sp"
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/number32"
+            android:id="@+id/selectedNumber5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="32"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_row="0"
+            android:layout_column="4"
+            android:background="#256B85"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:padding="10sp"
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/number33"
+            android:id="@+id/selectedNumber6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="33"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_row="0"
+            android:layout_column="5"
+            android:background="#256B85"
+            android:gravity="center"
+            android:text=""
+            android:inputType="number"
+            android:padding="10sp"
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/number34"
+            android:id="@+id/selectedNumber7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="34"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_row="0"
+            android:layout_column="6"
+            android:background="#256B85"
+            android:gravity="center"
+            android:text=""
+            android:inputType="number"
+            android:padding="10sp"
+            android:textSize="26sp" />
 
-        <TextView
-            android:id="@+id/number35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="35"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number36"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="36"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number37"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="37"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number38"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="38"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number39"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="39"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/number40"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:background="#2e8b57"
-            android:foregroundGravity="center"
-            android:onClick="chooseNumber"
-            android:padding="15sp"
-            android:text="40"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
 
     </GridLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXTRAS"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridView10" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NUMBERS"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/gridView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
