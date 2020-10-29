@@ -15,6 +15,7 @@ import java.util.List;
 
 public class Game1 extends AppCompatActivity {
 
+    /* For General Numbers */
     int countSelected=0;
     TextView number1;
     TextView number2;
@@ -24,6 +25,16 @@ public class Game1 extends AppCompatActivity {
     TextView number6;
     TextView number7;
     Boolean alreadyExists;
+
+    /* For Extra Numbers */
+
+    int extraCount=0;
+    TextView extra1;
+    TextView extra2;
+    TextView extra3;
+    Boolean extraExists;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,10 +181,83 @@ public class Game1 extends AppCompatActivity {
         }
         else if(countSelected>=7)
         {
-            Toast.makeText(getApplicationContext(),"Maximum numbers has been selected",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
 
         }
-        Toast.makeText(getApplicationContext(),String.valueOf(countSelected),Toast.LENGTH_LONG).show();
+    }
 
+
+    public void addExtra(View view)
+    {
+        TextView selectedText =(TextView) findViewById(view.getId());
+        extraExists=false;
+        extra1 =(TextView) findViewById(R.id.Extra1);
+        extra2 =(TextView) findViewById(R.id.Extra2);
+        extra3 =(TextView) findViewById(R.id.Extra3);
+
+
+        if(!extra1.getText().toString().equals("") && !extraExists) {
+            if (extra1.getText().toString().equals(selectedText.getText().toString())) {
+                extra1.setText("");
+                selectedText.setBackgroundColor(Color.parseColor("#C0C0C0"));
+                extraExists = true;
+                extraCount=extraCount-1;
+                return;
+            }
+            else
+            {
+                extraExists=false;
+            }
+        }
+        if(!extra2.getText().toString().equals("") && !extraExists) {
+            if (extra2.getText().toString().equals( selectedText.getText().toString())) {
+                extra2.setText("");
+                selectedText.setBackgroundColor(Color.parseColor("#C0C0C0"));
+                extraExists = true;
+                extraCount=extraCount-1;
+                return;
+            }
+            else
+            {
+                extraExists=false;
+            }
+        }
+        if(!extra3.getText().toString().equals("") && !extraExists) {
+            if (extra3.getText().toString().equals(selectedText.getText().toString())) {
+                extra3.setText("");
+                selectedText.setBackgroundColor(Color.parseColor("#C0C0C0"));
+                extraExists = true;
+                extraCount=extraCount-1;
+                return;
+            }
+            else
+            {
+                extraExists=false;
+            }
+        }
+
+        if(extraCount<3 && (!extraExists))
+        {
+            if(extra1.getText().toString().equals(""))
+            {
+                extra1.setText(selectedText.getText());
+            }
+            else if(extra2.getText().toString().equals(""))
+            {
+                extra2.setText(selectedText.getText());
+            }
+            else if(extra3.getText().toString().equals(""))
+            {
+                extra3.setText(selectedText.getText());
+            }
+
+            view.setBackgroundColor(Color.parseColor("#256B85"));
+            extraCount=extraCount+1;
+        }
+        else if(extraCount>=3)
+        {
+            Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
+
+        }
     }
 }
