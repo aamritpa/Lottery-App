@@ -257,7 +257,23 @@ public class Game1 extends AppCompatActivity {
         else if(extraCount>=3)
         {
             Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
-
         }
+    }
+    public void minusDraw(View view)
+    {
+        TextView textView= (TextView) findViewById(R.id.totalDraws);
+        if(Integer.parseInt(textView.getText().toString())>=2)
+        {
+            textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())-1));
+        }
+    }
+    public void plusDraw(View view)
+    {
+        TextView textView= (TextView) findViewById(R.id.totalDraws);
+        if(Integer.parseInt(textView.getText().toString())<5)
+        {
+            textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())+1));
+        }
+
     }
 }

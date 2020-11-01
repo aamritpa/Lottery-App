@@ -13,7 +13,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="280dp"
         android:background="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -28,6 +28,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="585dp"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="10sp">
 
@@ -819,8 +820,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="10sp">
 
@@ -906,8 +908,8 @@
                         android:layout_column="0"
                         android:background="#C0C0C0"
                         android:foregroundGravity="center"
-                        android:onClick="addExtra"
                         android:inputType="text"
+                        android:onClick="addExtra"
                         android:padding="15sp"
                         android:text="E"
                         android:textColor="@android:color/black"
@@ -937,9 +939,9 @@
                         android:layout_column="0"
                         android:background="#C0C0C0"
                         android:foregroundGravity="center"
+                        android:inputType="text"
                         android:onClick="addExtra"
                         android:padding="15sp"
-                        android:inputType="text"
                         android:text="F"
                         android:textColor="@android:color/black"
                         android:textSize="15sp" />
@@ -952,9 +954,9 @@
                         android:layout_column="0"
                         android:background="#C0C0C0"
                         android:foregroundGravity="center"
+                        android:inputType="text"
                         android:onClick="addExtra"
                         android:padding="15sp"
-                        android:inputType="text"
                         android:text="G"
                         android:textColor="@android:color/black"
                         android:textSize="15sp" />
@@ -967,8 +969,8 @@
                         android:layout_column="0"
                         android:background="#C0C0C0"
                         android:foregroundGravity="center"
-                        android:onClick="addExtra"
                         android:inputType="text"
+                        android:onClick="addExtra"
                         android:padding="15sp"
                         android:text="H"
                         android:textColor="@android:color/black"
@@ -982,9 +984,9 @@
                         android:layout_column="0"
                         android:background="#C0C0C0"
                         android:foregroundGravity="center"
+                        android:inputType="text"
                         android:onClick="addExtra"
                         android:padding="15sp"
-                        android:inputType="text"
                         android:text="I"
                         android:textColor="@android:color/black"
                         android:textSize="15sp" />
@@ -997,8 +999,8 @@
                         android:layout_column="0"
                         android:background="#C0C0C0"
                         android:foregroundGravity="center"
-                        android:onClick="addExtra"
                         android:inputType="text"
+                        android:onClick="addExtra"
                         android:padding="15sp"
                         android:text="J"
                         android:textColor="@android:color/black"
@@ -1299,17 +1301,18 @@
 
     </ScrollView>
 
+
     <GridLayout
         android:id="@+id/gridView12"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:background="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337">
+        app:layout_constraintVertical_bias="0.178">
 
 
         <TextView
@@ -1323,7 +1326,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectedNumber2"
@@ -1336,7 +1339,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectedNumber3"
@@ -1349,7 +1352,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectedNumber4"
@@ -1362,7 +1365,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectedNumber5"
@@ -1375,7 +1378,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectedNumber6"
@@ -1388,7 +1391,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectedNumber7"
@@ -1401,7 +1404,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
 
     </GridLayout>
@@ -1413,23 +1416,27 @@
         android:layout_marginBottom="64dp"
         android:text="EXTRAS"
         android:textColor="@android:color/black"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridView12" />
+        app:layout_constraintTop_toBottomOf="@+id/gridView12"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:text="NUMBERS"
         android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridView12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <GridLayout
         android:id="@+id/gridView13"
@@ -1438,8 +1445,10 @@
         android:background="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12">
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/Extra1"
@@ -1452,7 +1461,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/Extra2"
@@ -1466,7 +1475,7 @@
             android:onClick="addExtra"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/Extra3"
@@ -1479,9 +1488,93 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
-            android:textSize="26sp" />
+            android:textSize="20sp" />
 
     </GridLayout>
+
+    <GridLayout
+        android:id="@+id/gridView14"
+        android:layout_width="263dp"
+        android:layout_height="57dp"
+        android:background="#256B85"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridView13"
+        app:layout_constraintVertical_bias="0.179">
+
+        <TextView
+            android:id="@+id/Drawtext"
+            android:layout_width="66dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="#256B85"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Draws"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="47dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:onClick="minusDraw"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/totalDraws"
+            android:layout_width="46dp"
+            android:layout_height="52dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="47dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:onClick="plusDraw"
+            android:padding="2sp"
+            android:text="+" />
+
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="54dp"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="$0"
+            android:textColor="@android:color/black" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="99dp"
+        android:layout_height="39dp"
+        android:layout_gravity="top"
+        android:background="#4CBB17"
+        android:padding="2sp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridView14" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
