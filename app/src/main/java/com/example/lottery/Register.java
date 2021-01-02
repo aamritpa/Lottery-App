@@ -19,7 +19,7 @@ import java.sql.Statement;
 
 public class Register extends AppCompatActivity {
 
-    private static String ip= "192.168.1.71";
+    private static String ip= "192.168.0.111";
     private static String port ="1433";
     private static String Classes= "net.sourceforge.jtds.jdbc.Driver";
     private static String database ="LoginCredentials";

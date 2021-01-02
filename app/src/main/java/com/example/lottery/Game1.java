@@ -7,11 +7,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Game1 extends AppCompatActivity {
 
@@ -26,6 +28,7 @@ public class Game1 extends AppCompatActivity {
     TextView number7;
     Boolean alreadyExists;
 
+
     /* For Extra Numbers */
 
     int extraCount=0;
@@ -39,20 +42,18 @@ public class Game1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1);
-
     }
 
     public void chooseNumber(View view){
         TextView selectedText =(TextView) findViewById(view.getId());
         alreadyExists=false;
-        number1 =(TextView) findViewById(R.id.selectedNumber1);
-        number2 =(TextView) findViewById(R.id.selectedNumber2);
+        number1=(TextView) findViewById(R.id.selectedNumber1);
+        number2=(TextView) findViewById(R.id.selectedNumber2);
         number3 =(TextView) findViewById(R.id.selectedNumber3);
-        number4 =(TextView) findViewById(R.id.selectedNumber4);
-        number5 =(TextView) findViewById(R.id.selectedNumber5);
-        number6 =(TextView) findViewById(R.id.selectedNumber6);
-        number7 =(TextView) findViewById(R.id.selectedNumber7);
-
+        number4=(TextView) findViewById(R.id.selectedNumber4);;
+        number5=(TextView) findViewById(R.id.selectedNumber5);;
+        number6=(TextView) findViewById(R.id.selectedNumber6);;
+        number7=(TextView) findViewById(R.id.selectedNumber7);;
 
         if(!number1.getText().toString().equals("") && !alreadyExists) {
             if (Integer.valueOf(number1.getText().toString()).equals( Integer.valueOf(selectedText.getText().toString()))) {
@@ -191,6 +192,13 @@ public class Game1 extends AppCompatActivity {
     {
         TextView selectedText =(TextView) findViewById(view.getId());
         extraExists=false;
+        number1=(TextView) findViewById(R.id.selectedNumber1);
+        number2=(TextView) findViewById(R.id.selectedNumber2);
+        number3 =(TextView) findViewById(R.id.selectedNumber3);
+        number4=(TextView) findViewById(R.id.selectedNumber4);;
+        number5=(TextView) findViewById(R.id.selectedNumber5);;
+        number6=(TextView) findViewById(R.id.selectedNumber6);;
+        number7=(TextView) findViewById(R.id.selectedNumber7);;
         extra1 =(TextView) findViewById(R.id.Extra1);
         extra2 =(TextView) findViewById(R.id.Extra2);
         extra3 =(TextView) findViewById(R.id.Extra3);
@@ -274,6 +282,52 @@ public class Game1 extends AppCompatActivity {
         {
             textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())+1));
         }
+
+    }
+
+    public void setRandomNumber(View view)
+    {
+
+        number1=(TextView) findViewById(R.id.selectedNumber1);
+        number2=(TextView) findViewById(R.id.selectedNumber2);
+        number3 =(TextView) findViewById(R.id.selectedNumber3);
+        number4=(TextView) findViewById(R.id.selectedNumber4);;
+        number5=(TextView) findViewById(R.id.selectedNumber5);;
+        number6=(TextView) findViewById(R.id.selectedNumber6);;
+        number7=(TextView) findViewById(R.id.selectedNumber7);;
+        extra1 =(TextView) findViewById(R.id.Extra1);
+        extra2 =(TextView) findViewById(R.id.Extra2);
+        extra3 =(TextView) findViewById(R.id.Extra3);
+
+        //Setting all numbers to empty string
+        number1.setText("");number2.setText("");number3.setText("");number4.setText("");number5.setText("");number6.setText("");number7.setText("");
+        extra1.setText("");extra2.setText("");extra3.setText("");
+
+
+        for (int i = 1; i <= 50; i++) {
+            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + i, "id",
+                    this.getPackageName()));
+            numbers.setBackgroundColor(Color.parseColor("#C0C0C0"));
+        }
+
+        //Generating 7 numbers and storing in ArrayList
+        ArrayList arrayList= new ArrayList(7);
+        Random random= new Random();
+        int countRandomNumber=1;
+        while(countRandomNumber<=7) {
+            int num = random.nextInt(50) + 1;
+            if (!arrayList.contains(num)) {
+                arrayList.add(num);
+                countRandomNumber = countRandomNumber + 1;
+            }
+        }
+
+        for (int i = 0; i <= 6; i++) {
+            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + arrayList.get(i), "id",
+                    this.getPackageName()));
+            numbers.setBackgroundColor(Color.parseColor("#256B85"));
+        }
+
 
     }
 }
