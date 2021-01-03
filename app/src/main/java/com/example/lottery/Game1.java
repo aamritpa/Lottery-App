@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -268,23 +270,48 @@ public class Game1 extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
         }
     }
-    public void minusDraw(View view)
+    public void plusMinusDraw(View view)
     {
         TextView textView= (TextView) findViewById(R.id.totalDraws);
-        if(Integer.parseInt(textView.getText().toString())>=2)
+        if (getResources().getResourceEntryName(view.getId()).equals("minus"))
         {
-            textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())-1));
-        }
-    }
-    public void plusDraw(View view)
-    {
-        TextView textView= (TextView) findViewById(R.id.totalDraws);
-        if(Integer.parseInt(textView.getText().toString())<5)
-        {
-            textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())+1));
-        }
+            if(Integer.parseInt(textView.getText().toString())>=2)
+            {
+                textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())-1));
+            }
+            Toast.makeText(this, (getResources().getResourceEntryName(view.getId())).toString(), Toast.LENGTH_SHORT).show();
 
+        }
+        else if(getResources().getResourceEntryName(view.getId()).equals("plus")){
+            if(Integer.parseInt(textView.getText().toString())<5)
+            {
+                textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())+1));
+            }
+
+        }
+        TextView amount= (TextView) findViewById(R.id.amount);
+        if(Integer.parseInt(textView.getText().toString())==1)
+        {
+            amount.setText(String.valueOf("100 ₹"));
+        }
+        else if(Integer.parseInt(textView.getText().toString())==2)
+        {
+            amount.setText(String.valueOf("200 ₹"));
+        }
+        else if(Integer.parseInt(textView.getText().toString())==3)
+        {
+            amount.setText(String.valueOf("300 ₹"));
+        }
+        else if(Integer.parseInt(textView.getText().toString())==4)
+        {
+            amount.setText(String.valueOf("400 ₹"));
+        }
+        else if(Integer.parseInt(textView.getText().toString())==5)
+        {
+            amount.setText(String.valueOf("500 ₹"));
+        }
     }
+
 
     public void setRandomNumber(View view)
     {
@@ -373,6 +400,8 @@ public class Game1 extends AppCompatActivity {
     public void onConfirm(View view){
         if((countSelected==7 && extraCount==0) || (countSelected==7 && extraCount==3) )
         {
+            TextView amount= (TextView) findViewById(R.id.amount);
+            TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
             Intent intent= new Intent(getApplicationContext(),Payment.class);
             intent.putExtra("number1",number1.getText());
             intent.putExtra("number2",number2.getText());
@@ -384,11 +413,13 @@ public class Game1 extends AppCompatActivity {
             intent.putExtra("extra1",extra1.getText());
             intent.putExtra("extra2",extra2.getText());
             intent.putExtra("extra3",extra3.getText());
+            intent.putExtra("amount",amount.getText().toString());
+            intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
             startActivity(intent);
         }
         else
         {
-            Toast.makeText(this, "Please 7 Numbers", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Select Minimum Numbers!", Toast.LENGTH_SHORT).show();
         }
     }
 }

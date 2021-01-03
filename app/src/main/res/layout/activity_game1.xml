@@ -1518,14 +1518,14 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/minus"
             android:layout_width="47dp"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="1"
             android:layout_marginStart="4dp"
             android:layout_marginLeft="4dp"
-            android:onClick="minusDraw"
+            android:onClick="plusMinusDraw"
             android:text="-" />
 
         <TextView
@@ -1540,12 +1540,12 @@
             android:textColor="@android:color/black" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/plus"
             android:layout_width="47dp"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="3"
-            android:onClick="plusDraw"
+            android:onClick="plusMinusDraw"
             android:padding="2sp"
             android:text="+" />
 
@@ -1558,7 +1558,7 @@
             android:layout_column="4"
             android:gravity="center"
             android:inputType="number"
-            android:text="$0"
+            android:text="100 ₹"
             android:textColor="@android:color/black" />
 
     </GridLayout>

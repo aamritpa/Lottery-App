@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.razorpay.Checkout;
@@ -20,12 +21,21 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
     String TAG= "PAYMENT ERROR";
     Button payButton;
+    String amount;
+    int totalDraws;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         Checkout.preload(getApplicationContext());
 
+        Intent intent = getIntent();
+        amount= intent.getStringExtra("amount");
+        totalDraws= intent.getIntExtra("totalDraws",1);
+
+
+        TextView finalizedAmount= (TextView)findViewById(R.id.finalizedAmount);
+        finalizedAmount.setText(amount);
         payButton= findViewById(R.id.payButton);
         payButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +86,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
             //options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
             //options.put("theme.color", "#3399cc");
             options.put("currency", "INR");
-            options.put("amount", "50000");//pass amount in currency subunits
+            options.put("amount", totalDraws*10000);//pass amount in currency subunits
             //options.put("prefill.email", "gaurav.kumar@example.com");
             //options.put("prefill.contact","9988776655");
             checkout.open(activity, options);

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".Payment">
 
     <Button
@@ -13,6 +14,35 @@
         android:text="Proceed To Pay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <TextView
+        android:id="@+id/bigDrawText"
+        android:layout_width="157dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginBottom="6dp"
+        android:text="BigDraw"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/finalizedAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/finalizedAmount"
+        android:layout_width="60dp"
+        android:layout_height="40sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="356dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bigDrawText"
+        app:layout_constraintTop_toBottomOf="@+id/bigDrawText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
