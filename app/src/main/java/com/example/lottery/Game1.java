@@ -2,6 +2,7 @@ package com.example.lottery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -287,7 +288,8 @@ public class Game1 extends AppCompatActivity {
 
     public void setRandomNumber(View view)
     {
-
+        countSelected=7;
+        extraCount=3;
         number1=(TextView) findViewById(R.id.selectedNumber1);
         number2=(TextView) findViewById(R.id.selectedNumber2);
         number3 =(TextView) findViewById(R.id.selectedNumber3);
@@ -311,23 +313,82 @@ public class Game1 extends AppCompatActivity {
         }
 
         //Generating 7 numbers and storing in ArrayList
-        ArrayList arrayList= new ArrayList(7);
+        ArrayList arrayListNumbers= new ArrayList(7);
         Random random= new Random();
         int countRandomNumber=1;
         while(countRandomNumber<=7) {
             int num = random.nextInt(50) + 1;
-            if (!arrayList.contains(num)) {
-                arrayList.add(num);
+            if (!arrayListNumbers.contains(num)) {
+                arrayListNumbers.add(num);
                 countRandomNumber = countRandomNumber + 1;
+
             }
         }
-
+        number1.setText(arrayListNumbers.get(0).toString());
+        number2.setText(arrayListNumbers.get(1).toString());
+        number3.setText(arrayListNumbers.get(2).toString());
+        number4.setText(arrayListNumbers.get(3).toString());
+        number5.setText(arrayListNumbers.get(4).toString());
+        number6.setText(arrayListNumbers.get(5).toString());
+        number7.setText(arrayListNumbers.get(6).toString());
         for (int i = 0; i <= 6; i++) {
-            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + arrayList.get(i), "id",
+            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + arrayListNumbers.get(i), "id",
                     this.getPackageName()));
             numbers.setBackgroundColor(Color.parseColor("#256B85"));
         }
 
+        //Random number generator for Extras
 
+
+        for (int i = 65; i <= 90; i++) {
+            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + Character.toString((char)i), "id",
+                    this.getPackageName()));
+            numbers.setBackgroundColor(Color.parseColor("#C0C0C0"));
+        }
+
+
+        ArrayList listExtras= new ArrayList(3);
+        int countRandomNumberExtra=1;
+        while(countRandomNumberExtra<=3) {
+            int num = random.nextInt(26) + 65;
+
+             //converting integer to char (ASCII)
+            String charValue = Character.toString((char)num);
+            if (!listExtras.contains(charValue)) {
+                listExtras.add(charValue);
+                countRandomNumberExtra = countRandomNumberExtra + 1;
+            }
+
+        }
+        extra1.setText(listExtras.get(0).toString());
+        extra2.setText(listExtras.get(1).toString());
+        extra3.setText(listExtras.get(2).toString());
+
+        for (int i = 0; i <= 2; i++) {
+            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + listExtras.get(i), "id",
+                    this.getPackageName()));
+            numbers.setBackgroundColor(Color.parseColor("#256B85"));
+        }
+    }
+    public void onConfirm(View view){
+        if((countSelected==7 && extraCount==0) || (countSelected==7 && extraCount==3) )
+        {
+            Intent intent= new Intent(getApplicationContext(),Payment.class);
+            intent.putExtra("number1",number1.getText());
+            intent.putExtra("number2",number2.getText());
+            intent.putExtra("number3",number3.getText());
+            intent.putExtra("number4",number4.getText());
+            intent.putExtra("number5",number5.getText());
+            intent.putExtra("number6",number6.getText());
+            intent.putExtra("number7",number7.getText());
+            intent.putExtra("extra1",extra1.getText());
+            intent.putExtra("extra2",extra2.getText());
+            intent.putExtra("extra3",extra3.getText());
+            startActivity(intent);
+        }
+        else
+        {
+            Toast.makeText(this, "Please 7 Numbers", Toast.LENGTH_SHORT).show();
+        }
     }
 }
