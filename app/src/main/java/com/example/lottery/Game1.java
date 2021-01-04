@@ -403,18 +403,22 @@ public class Game1 extends AppCompatActivity {
             TextView amount= (TextView) findViewById(R.id.amount);
             TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
             Intent intent= new Intent(getApplicationContext(),Payment.class);
-            intent.putExtra("number1",number1.getText());
-            intent.putExtra("number2",number2.getText());
-            intent.putExtra("number3",number3.getText());
-            intent.putExtra("number4",number4.getText());
-            intent.putExtra("number5",number5.getText());
-            intent.putExtra("number6",number6.getText());
-            intent.putExtra("number7",number7.getText());
-            intent.putExtra("extra1",extra1.getText());
-            intent.putExtra("extra2",extra2.getText());
-            intent.putExtra("extra3",extra3.getText());
+            intent.putExtra("number1",number1.getText().toString());
+            intent.putExtra("number2",number2.getText().toString());
+            intent.putExtra("number3",number3.getText().toString());
+            intent.putExtra("number4",number4.getText().toString());
+            intent.putExtra("number5",number5.getText().toString());
+            intent.putExtra("number6",number6.getText().toString());
+            intent.putExtra("number7",number7.getText().toString());
+            intent.putExtra("extra1",extra1.getText().toString());
+            intent.putExtra("extra2",extra2.getText().toString());
+            intent.putExtra("extra3",extra3.getText().toString());
             intent.putExtra("amount",amount.getText().toString());
             intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
+
+
+
+
             startActivity(intent);
         }
         else

@@ -9,28 +9,25 @@
 
     <Button
         android:id="@+id/payButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Proceed To Pay"
+        android:layout_width="162dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="180dp"
+        android:background="#4CBB17"
+        android:text="@string/proceed_to_pay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/bigDrawText"
-        android:layout_width="157dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="284dp"
-        android:layout_marginBottom="6dp"
+        android:layout_width="161dp"
+        android:layout_height="54dp"
         android:text="BigDraw"
         android:textColor="@android:color/black"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/finalizedAmount"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,11 +35,321 @@
         android:id="@+id/finalizedAmount"
         android:layout_width="60dp"
         android:layout_height="40sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="356dp"
+        android:layout_marginBottom="12dp"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/bigDrawText"
-        app:layout_constraintTop_toBottomOf="@+id/bigDrawText" />
+        app:layout_constraintBottom_toTopOf="@+id/payButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="206dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="#256B85"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/finalizedNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/finalizedNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="3"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="4"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="5"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_column="4"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/finalizedNumber6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="@string/_6"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#256B85"
+            android:padding="5sp"
+            android:text="@string/_7"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="206dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="#256B85"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/finalizedNumber8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="@string/_8"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/finalizedNumber9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="9"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="10"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="11"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_column="4"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/finalizedNumber13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="13"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="14"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="206dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="#256B85"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/finalizedNumber15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="15"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/finalizedNumber16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="16"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="18"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="19"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="20"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_column="4"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/finalizedNumber20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="21"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedNumber21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="22"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout4"
+        android:layout_width="66dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="12dp"
+        android:background="#256B85"
+        app:layout_constraintBottom_toTopOf="@+id/finalizedAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/finalizedExtra1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/finalizedExtra2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="B"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/finalizedExtra3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="C"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="Numbers Selected"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Extra's Selected"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

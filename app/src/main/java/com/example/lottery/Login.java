@@ -25,7 +25,8 @@ public class Login extends AppCompatActivity {
     private static String username = "test";
     private static String password= "test";
     private static String url = "jdbc:jtds:sqlserver://"+ip+":"+port+"/"+database;
-    private Connection connection =null;
+    static Connection connection =null;
+    static String userEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +51,7 @@ public class Login extends AppCompatActivity {
     public void toMainPage(View view){
 
         TextView email = (TextView) findViewById(R.id.loginEmail);
-        String userEmail= email.getText().toString();
+        userEmail= email.getText().toString();
 
         TextView password = (TextView) findViewById(R.id.loginPassword);
         String userPassword= password.getText().toString();

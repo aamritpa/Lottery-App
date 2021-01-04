@@ -27,7 +27,7 @@ public class Register extends AppCompatActivity {
     private static String password= "test";
     private static String url = "jdbc:jtds:sqlserver://"+ip+":"+port+"/"+database;
 
-    private Connection connection =null;
+    static Connection connection =null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
