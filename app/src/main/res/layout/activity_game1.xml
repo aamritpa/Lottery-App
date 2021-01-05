@@ -27,7 +27,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="585dp"
+                android:layout_height="613dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="10sp">
@@ -35,7 +35,7 @@
                 <GridLayout
                     android:id="@+id/gridView1"
                     android:layout_width="wrap_content"
-                    android:layout_height="529dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginStart="4dp"
                     android:layout_marginLeft="4dp"
@@ -48,7 +48,7 @@
 
                     <TextView
                         android:id="@+id/number1"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="0"
                         android:layout_column="0"
@@ -63,7 +63,7 @@
 
                     <TextView
                         android:id="@+id/number2"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="1"
                         android:layout_column="0"
@@ -78,7 +78,7 @@
 
                     <TextView
                         android:id="@+id/number3"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="2"
                         android:layout_column="0"
@@ -93,7 +93,7 @@
 
                     <TextView
                         android:id="@+id/number4"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="3"
                         android:layout_column="0"
@@ -108,7 +108,7 @@
 
                     <TextView
                         android:id="@+id/number5"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="4"
                         android:layout_column="0"
@@ -118,11 +118,11 @@
                         android:padding="15sp"
                         android:text="5"
                         android:textColor="@android:color/black"
-                        android:textSize="18sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/number6"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="5"
                         android:layout_column="0"
@@ -136,7 +136,7 @@
 
                     <TextView
                         android:id="@+id/number7"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="6"
                         android:layout_column="0"
@@ -150,7 +150,7 @@
 
                     <TextView
                         android:id="@+id/number8"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="7"
                         android:layout_column="0"
@@ -164,7 +164,7 @@
 
                     <TextView
                         android:id="@+id/number9"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="8"
                         android:layout_column="0"
@@ -178,7 +178,7 @@
 
                     <TextView
                         android:id="@+id/number10"
-                        android:layout_width="49dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="9"
                         android:layout_column="0"
@@ -195,7 +195,7 @@
                 <GridLayout
                     android:id="@+id/gridView2"
                     android:layout_width="wrap_content"
-                    android:layout_height="529dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
@@ -208,7 +208,7 @@
 
                     <TextView
                         android:id="@+id/number11"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="0"
                         android:layout_column="0"
@@ -222,7 +222,7 @@
 
                     <TextView
                         android:id="@+id/number12"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="1"
                         android:layout_column="0"
@@ -236,7 +236,7 @@
 
                     <TextView
                         android:id="@+id/number13"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="2"
                         android:layout_column="0"
@@ -250,7 +250,7 @@
 
                     <TextView
                         android:id="@+id/number14"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="3"
                         android:layout_column="0"
@@ -264,7 +264,7 @@
 
                     <TextView
                         android:id="@+id/number15"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="4"
                         android:layout_column="0"
@@ -278,7 +278,7 @@
 
                     <TextView
                         android:id="@+id/number16"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="5"
                         android:layout_column="0"
@@ -292,7 +292,7 @@
 
                     <TextView
                         android:id="@+id/number17"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="6"
                         android:layout_column="0"
@@ -306,7 +306,7 @@
 
                     <TextView
                         android:id="@+id/number18"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="7"
                         android:layout_column="0"
@@ -320,7 +320,7 @@
 
                     <TextView
                         android:id="@+id/number19"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="8"
                         android:layout_column="0"
@@ -334,7 +334,7 @@
 
                     <TextView
                         android:id="@+id/number20"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="9"
                         android:layout_column="0"
@@ -351,7 +351,7 @@
                 <GridLayout
                     android:id="@+id/gridView3"
                     android:layout_width="wrap_content"
-                    android:layout_height="529dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
@@ -507,7 +507,7 @@
                 <GridLayout
                     android:id="@+id/gridView4"
                     android:layout_width="wrap_content"
-                    android:layout_height="529dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
@@ -663,7 +663,7 @@
                 <GridLayout
                     android:id="@+id/gridView5"
                     android:layout_width="wrap_content"
-                    android:layout_height="529dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
@@ -1305,7 +1305,7 @@
     <GridLayout
         android:id="@+id/gridView12"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -1494,8 +1494,8 @@
 
     <GridLayout
         android:id="@+id/gridView14"
-        android:layout_width="263dp"
-        android:layout_height="57dp"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
         android:background="#256B85"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -1552,10 +1552,10 @@
 
         <TextView
             android:id="@+id/amount"
-            android:layout_width="54dp"
+            android:layout_width="70dp"
             android:layout_height="50dp"
             android:layout_row="0"
-            android:layout_column="4"
+            android:layout_column="5"
             android:gravity="center"
             android:inputType="number"
             android:text="100 ₹"
@@ -1566,8 +1566,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="75dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:background="#4CBB17"
         android:onClick="onConfirm"
@@ -1582,8 +1582,8 @@
 
     <Button
         android:id="@+id/random"
-        android:layout_width="87dp"
-        android:layout_height="38dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#4CBB17"
         android:onClick="setRandomNumber"
         android:padding="2sp"
@@ -1595,8 +1595,8 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="108dp"
-        android:layout_height="27dp"
+        android:layout_width="116dp"
+        android:layout_height="25dp"
         android:text="* Two Lines will be selected randomly"
         android:textColor="@android:color/black"
         android:textSize="10sp"

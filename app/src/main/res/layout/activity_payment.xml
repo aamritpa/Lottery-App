@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/payButton"
-        android:layout_width="162dp"
-        android:layout_height="49dp"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="180dp"
         android:background="#4CBB17"
         android:text="@string/proceed_to_pay"
@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/bigDrawText"
-        android:layout_width="161dp"
-        android:layout_height="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="BigDraw"
         android:textColor="@android:color/black"
         android:textSize="40sp"
@@ -33,8 +33,8 @@
 
     <TextView
         android:id="@+id/finalizedAmount"
-        android:layout_width="60dp"
-        android:layout_height="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -45,8 +45,8 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:background="#256B85"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
@@ -130,8 +130,8 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout2"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:background="#256B85"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout3"
@@ -208,8 +208,8 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout3"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:background="#256B85"
         app:layout_constraintBottom_toTopOf="@+id/textView23"
@@ -286,8 +286,8 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout4"
-        android:layout_width="66dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:background="#256B85"
         app:layout_constraintBottom_toTopOf="@+id/finalizedAmount"
