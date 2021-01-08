@@ -20,18 +20,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/bigDrawText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BigDraw"
-        android:textColor="@android:color/black"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/finalizedAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -330,24 +318,27 @@
     <TextView
         android:id="@+id/textView22"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@android:color/holo_blue_light"
+        android:layout_height="43dp"
+        android:background="@android:color/black"
         android:gravity="center"
         android:text="Numbers Selected"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
         android:layout_marginBottom="12dp"
+        android:background="@android:color/black"
+        android:gravity="center"
         android:text="Extra's Selected"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -1,6 +1,7 @@
 package com.example.lottery;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.gridlayout.widget.GridLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +37,20 @@ public class Lottery extends AppCompatActivity {
             Toast.makeText(this,"Game2",Toast.LENGTH_LONG).show();
 
         }
+        else if(view.getId()==R.id.menuButton)
+        {
+
+            GridLayout gridLayout= (GridLayout) findViewById(R.id.menuToolbar);
+            if(gridLayout.getVisibility()==View.VISIBLE)
+            {
+                gridLayout.setVisibility(View.INVISIBLE);
+            }
+            else if(gridLayout.getVisibility()==View.INVISIBLE)
+            {
+                gridLayout.setVisibility(View.VISIBLE);
+            }
+        }
     }
+
 
 }
