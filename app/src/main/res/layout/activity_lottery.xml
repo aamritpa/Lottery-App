@@ -20,9 +20,12 @@
 
 
         <LinearLayout
+            android:id="@+id/lottoLayout"
             android:layout_width="match_parent"
             android:layout_height="800sp"
-            android:orientation="vertical">
+            android:onClick="goToGame"
+            android:orientation="vertical"
+            tools:visibility="gone">
 
 
             <TextView
@@ -203,7 +206,7 @@
         android:layout_width="217dp"
         android:layout_height="683dp"
         android:background="@android:color/black"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
