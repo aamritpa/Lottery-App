@@ -24,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="800sp"
             android:onClick="goToGame"
-            android:orientation="vertical"
-            tools:visibility="gone">
+            android:orientation="vertical">
 
 
             <TextView
@@ -203,16 +202,17 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/menuToolbar"
-        android:layout_width="217dp"
-        android:layout_height="683dp"
+        android:layout_width="408dp"
+        android:layout_height="685dp"
         android:background="@android:color/black"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuButton"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="gone">
 
         <TextView
             android:id="@+id/textView21"
@@ -240,7 +240,7 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="match_parent"
+            android:layout_width="301dp"
             android:layout_height="119dp"
             app:layout_column="0"
             app:layout_row="0"
@@ -269,6 +269,53 @@
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="4" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="41dp"
+            android:layout_height="42dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="46dp"
+            android:layout_height="44dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="49dp"
+            android:layout_height="42dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="4"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="About"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="5" />
     </androidx.gridlayout.widget.GridLayout>
 
 

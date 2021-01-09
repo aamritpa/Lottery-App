@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class Lottery extends AppCompatActivity {
@@ -38,20 +39,20 @@ public class Lottery extends AppCompatActivity {
         else if(view.getId()==R.id.menuButton)
         {
 
-            GridLayout gridLayout= (GridLayout) findViewById(R.id.menuToolbar);
-            if(gridLayout.getVisibility()==View.VISIBLE)
+            GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbar);
+            LinearLayout lottoLayout =(LinearLayout)findViewById(R.id.lottoLayout);
+
+            if(menuLayout.getVisibility()==View.VISIBLE)
             {
-                gridLayout.setVisibility(View.GONE);
+                menuLayout.setVisibility(View.GONE);
+                lottoLayout.setVisibility(View.VISIBLE);
+
             }
-            else if(gridLayout.getVisibility()==View.GONE || gridLayout.getVisibility()==View.INVISIBLE)
+            else if(menuLayout.getVisibility()==View.GONE || menuLayout.getVisibility()==View.INVISIBLE)
             {
-                gridLayout.setVisibility(View.VISIBLE);
+                menuLayout.setVisibility(View.VISIBLE);
+                lottoLayout.setVisibility(View.GONE);
             }
-        }
-        else if(view.getId()==R.id.lottoLayout)
-        {
-            GridLayout gridLayout= (GridLayout) findViewById(R.id.menuToolbar);
-            gridLayout.setVisibility(View.GONE);
         }
     }
 }
