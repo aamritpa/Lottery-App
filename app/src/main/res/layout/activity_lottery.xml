@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".Lottery"
-    tools:visibility="visible">
+    tools:context=".Lottery">
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="411dp"
-        android:layout_height="700dp"
+        android:layout_width="382dp"
+        android:layout_height="697dp"
         android:layout_marginTop="50dp"
         android:background="#336666"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:gravity="center"
-                android:text="Chrome 69"
+                android:text="Draw4U"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -69,10 +68,13 @@
                     android:layout_row="0"
                     android:layout_column="0"
                     android:background="#2e8b57"
+                    android:fallbackLineSpacing="false"
                     android:padding="10sp"
+                    android:singleLine="false"
                     android:text="16"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -83,6 +85,7 @@
                     android:background="#2e8b57"
                     android:padding="10sp"
                     android:text="24"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -95,6 +98,7 @@
                     android:background="#2e8b57"
                     android:padding="10sp"
                     android:text="12"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -107,6 +111,7 @@
                     android:background="#2e8b57"
                     android:padding="10sp"
                     android:text="62"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -119,6 +124,7 @@
                     android:background="#2e8b57"
                     android:padding="10sp"
                     android:text="82"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -131,6 +137,7 @@
                     android:background="#2e8b57"
                     android:padding="10sp"
                     android:text="64"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -143,6 +150,7 @@
                     android:background="#2e8b57"
                     android:padding="10sp"
                     android:text="34"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -151,7 +159,7 @@
             <GridLayout
                 android:id="@+id/gridView"
                 android:layout_width="match_parent"
-                android:layout_height="733dp"
+                android:layout_height="match_parent"
                 android:background="#455C5A"
                 android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -202,120 +210,201 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/menuToolbar"
-        android:layout_width="408dp"
-        android:layout_height="685dp"
-        android:background="@android:color/black"
+        android:layout_width="410dp"
+        android:layout_height="717dp"
+        android:background="#FFFDD0"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuButton"
-        app:layout_constraintVertical_bias="0.0"
         tools:visibility="gone">
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="194dp"
+            android:layout_height="129dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bonanza" />
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:onClick="goToGame"
+            android:padding="10sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            app:srcCompat="@drawable/house" />
+
+        <ImageView
+            android:id="@+id/myProfileIcon"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:background="#FFFDD0"
+            android:padding="10sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:srcCompat="@drawable/man" />
+
+        <ImageView
+            android:id="@+id/TicketsIcon"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:padding="5sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            app:srcCompat="@drawable/lottery" />
+
+        <ImageView
+            android:id="@+id/walletIcon"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:background="#FFFDD0"
+            android:padding="10sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="4"
+            app:srcCompat="@drawable/wallet" />
+
+        <ImageView
+            android:id="@+id/winnerIcon"
+            android:layout_width="217dp"
+            android:layout_height="49dp"
+            android:background="#FFFDD0"
+            android:padding="8sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="6"
+            app:srcCompat="@drawable/winner" />
+
+        <ImageView
+            android:id="@+id/aboutIcon"
+            android:layout_width="217dp"
+            android:layout_height="49dp"
+            android:background="@android:color/white"
+            android:padding="10sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="7"
+            app:srcCompat="@drawable/company" />
+
+        <ImageView
+            android:id="@+id/helpIcon"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:padding="10sp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            app:layout_row="5"
+            app:srcCompat="@drawable/help" />
+
         <TextView
-            android:id="@+id/textView21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/black"
+            android:id="@+id/homeButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:onClick="goToGame"
             android:padding="10sp"
             android:text="Home"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="1" />
 
         <TextView
-            android:id="@+id/textView24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/black"
+            android:id="@+id/myProfileButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:padding="10sp"
-            android:text="Profile"
-            android:textColor="@android:color/white"
+            android:text="MyProfile"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="2" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="301dp"
-            android:layout_height="119dp"
-            app:layout_column="0"
-            app:layout_row="0"
-            app:srcCompat="@drawable/bonanza" />
-
         <TextView
-            android:id="@+id/textView26"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/black"
+            android:id="@+id/TicketsButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center"
             android:padding="10sp"
-            android:text="Wallet"
-            android:textColor="@android:color/white"
+            android:text="Tickets"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="3" />
 
         <TextView
-            android:id="@+id/textView27"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/black"
+            android:id="@+id/walletButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:padding="10sp"
-            android:text="Help"
-            android:textColor="@android:color/white"
+            android:text="Wallet"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="4" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="41dp"
-            android:layout_height="42dp"
-            app:layout_column="0"
-            app:layout_gravity="center"
-            app:layout_row="1"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="46dp"
-            android:layout_height="44dp"
-            app:layout_column="0"
-            app:layout_gravity="center"
-            app:layout_row="2"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="51dp"
-            android:layout_height="50dp"
-            app:layout_column="0"
-            app:layout_gravity="center"
-            app:layout_row="3"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="49dp"
-            android:layout_height="42dp"
-            app:layout_column="0"
-            app:layout_gravity="center"
-            app:layout_row="4"
-            tools:srcCompat="@tools:sample/avatars" />
-
         <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/helpButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center"
             android:padding="10sp"
-            android:text="About"
-            android:textColor="@android:color/white"
+            android:text="Help"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="5" />
+
+        <TextView
+            android:id="@+id/winnerButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:padding="10sp"
+            android:text="Winners"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="6" />
+
+        <TextView
+            android:id="@+id/aboutButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="10sp"
+            android:text="About"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="7" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:padding="10sp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="8" />
+
     </androidx.gridlayout.widget.GridLayout>
 
 

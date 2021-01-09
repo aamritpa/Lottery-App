@@ -24,6 +24,8 @@ public class Lottery extends AppCompatActivity {
     }
     public void goToGame(View view)
     {
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbar);
+        LinearLayout lottoLayout =(LinearLayout)findViewById(R.id.lottoLayout);
         if(view.getId()==R.id.game1)
         {
             Toast.makeText(this,"Game1",Toast.LENGTH_LONG).show();
@@ -39,8 +41,7 @@ public class Lottery extends AppCompatActivity {
         else if(view.getId()==R.id.menuButton)
         {
 
-            GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbar);
-            LinearLayout lottoLayout =(LinearLayout)findViewById(R.id.lottoLayout);
+
 
             if(menuLayout.getVisibility()==View.VISIBLE)
             {
@@ -53,6 +54,11 @@ public class Lottery extends AppCompatActivity {
                 menuLayout.setVisibility(View.VISIBLE);
                 lottoLayout.setVisibility(View.GONE);
             }
+        }
+        else if(view.getId()==R.id.homeButton || view.getId()==R.id.homeIcon)
+        {
+            menuLayout.setVisibility(View.GONE);
+            lottoLayout.setVisibility(View.VISIBLE);
         }
     }
 }
