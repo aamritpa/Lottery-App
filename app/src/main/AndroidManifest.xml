@@ -13,7 +13,13 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".Winners" />
+        <activity android:name=".Help" />
+        <activity android:name=".Wallet" />
+        <activity android:name=".UserTickets" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Payment" />
         <activity android:name=".Game1" />
         <activity android:name=".Lottery" />
         <activity android:name=".Login">

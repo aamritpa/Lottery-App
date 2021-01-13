@@ -24,8 +24,6 @@ public class Lottery extends AppCompatActivity {
     }
     public void goToGame(View view)
     {
-        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbar);
-        LinearLayout lottoLayout =(LinearLayout)findViewById(R.id.lottoLayout);
         if(view.getId()==R.id.game1)
         {
             Toast.makeText(this,"Game1",Toast.LENGTH_LONG).show();
@@ -38,16 +36,17 @@ public class Lottery extends AppCompatActivity {
             Toast.makeText(this,"Game2",Toast.LENGTH_LONG).show();
 
         }
-        else if(view.getId()==R.id.menuButton)
+    }
+    public void goToMenu(View view)
+    {
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbar);
+        LinearLayout lottoLayout =(LinearLayout)findViewById(R.id.lottoLayout);
+        if(view.getId()==R.id.menuButton)
         {
-
-
-
             if(menuLayout.getVisibility()==View.VISIBLE)
             {
                 menuLayout.setVisibility(View.GONE);
                 lottoLayout.setVisibility(View.VISIBLE);
-
             }
             else if(menuLayout.getVisibility()==View.GONE || menuLayout.getVisibility()==View.INVISIBLE)
             {
@@ -59,6 +58,36 @@ public class Lottery extends AppCompatActivity {
         {
             menuLayout.setVisibility(View.GONE);
             lottoLayout.setVisibility(View.VISIBLE);
+        }
+        else if(view.getId()==R.id.myProfileButton || view.getId()==R.id.myProfileIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Profile.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.TicketsButton || view.getId()==R.id.TicketsIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),UserTickets.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.walletButton || view.getId()==R.id.walletIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Wallet.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.helpButton || view.getId()==R.id.helpIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Help.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.winnerButton || view.getId()==R.id.winnerIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Winners.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.aboutButton || view.getId()==R.id.aboutIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),About.class);
+            startActivity(intent);
         }
     }
 }
