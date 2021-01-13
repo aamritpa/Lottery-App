@@ -24,7 +24,7 @@ public class UserTickets extends AppCompatActivity {
 
         ListView listView= (ListView) findViewById(R.id.TicketList);
 
-        ArrayList<List> ticketList = new ArrayList();
+        ArrayList<String> ticketList = new ArrayList();
 
         Statement statement =null;
         //This SQL Statement is not efficient. For large number of users we will change it to better efficient algorithm.
@@ -33,15 +33,15 @@ public class UserTickets extends AppCompatActivity {
             ResultSet resultSet = statement.executeQuery("Select * From Game1 Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
             Boolean userNotFound = true;
             while (resultSet.next()) {
-                ArrayList numbers =new ArrayList();
+                String numberInString ="";
                 for(int i=2;i<=25;i++)
                 {
-                    numbers.add(resultSet.getString(i));
+                    numberInString=numberInString+"   "+resultSet.getString(i);
                 }
-                ticketList.add(numbers);
+                ticketList.add(numberInString);
             }
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_list_item_1, android.R.id.text1, ticketList.get(0));
+                    android.R.layout.simple_list_item_1, android.R.id.text1, ticketList);
 
             listView.setAdapter(adapter);
             Toast.makeText(this,ticketList.get(0).toString(),Toast.LENGTH_LONG).show();
