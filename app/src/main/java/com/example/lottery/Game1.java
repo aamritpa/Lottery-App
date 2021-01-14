@@ -272,41 +272,41 @@ public class Game1 extends AppCompatActivity {
     }
     public void plusMinusDraw(View view)
     {
-        TextView textView= (TextView) findViewById(R.id.totalDraws);
+        TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
         if (getResources().getResourceEntryName(view.getId()).equals("minus"))
         {
-            if(Integer.parseInt(textView.getText().toString())>=2)
+            if(Integer.parseInt(totalDraws.getText().toString())>=2)
             {
-                textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())-1));
+                totalDraws.setText(String.valueOf(Integer.parseInt(totalDraws.getText().toString())-1));
             }
             Toast.makeText(this, (getResources().getResourceEntryName(view.getId())).toString(), Toast.LENGTH_SHORT).show();
 
         }
         else if(getResources().getResourceEntryName(view.getId()).equals("plus")){
-            if(Integer.parseInt(textView.getText().toString())<5)
+            if(Integer.parseInt(totalDraws.getText().toString())<5)
             {
-                textView.setText(String.valueOf(Integer.parseInt(textView.getText().toString())+1));
+                totalDraws.setText(String.valueOf(Integer.parseInt(totalDraws.getText().toString())+1));
             }
 
         }
         TextView amount= (TextView) findViewById(R.id.amount);
-        if(Integer.parseInt(textView.getText().toString())==1)
+        if(Integer.parseInt(totalDraws.getText().toString())==1)
         {
             amount.setText(String.valueOf("100 ₹"));
         }
-        else if(Integer.parseInt(textView.getText().toString())==2)
+        else if(Integer.parseInt(totalDraws.getText().toString())==2)
         {
             amount.setText(String.valueOf("200 ₹"));
         }
-        else if(Integer.parseInt(textView.getText().toString())==3)
+        else if(Integer.parseInt(totalDraws.getText().toString())==3)
         {
             amount.setText(String.valueOf("300 ₹"));
         }
-        else if(Integer.parseInt(textView.getText().toString())==4)
+        else if(Integer.parseInt(totalDraws.getText().toString())==4)
         {
             amount.setText(String.valueOf("400 ₹"));
         }
-        else if(Integer.parseInt(textView.getText().toString())==5)
+        else if(Integer.parseInt(totalDraws.getText().toString())==5)
         {
             amount.setText(String.valueOf("500 ₹"));
         }

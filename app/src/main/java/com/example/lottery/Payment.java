@@ -21,7 +21,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
 
 import static com.example.lottery.Login.connection;
@@ -168,11 +171,12 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
     @Override
     public void onPaymentSuccess(String s) {
-
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+        Toast.makeText(this,date,Toast.LENGTH_LONG).show(); //Storing the date when the ticket is bought
         try {
 
             String queryNumbersStatement = "Insert into Game1" +
-                    " (email,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,extra1,extra2,extra3) values "
+                    " (email,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,extra1,extra2,extra3,draws,purchasedDate) values "
                     + "('" + Login.userEmail.toString() + "','" + number1.getText().toString() + "','" + number2.getText().toString() +
                     "','" + number3.getText().toString() + "','" + number4.getText().toString() + "','" + number5.getText().toString()
                     + "','" + number6.getText().toString() + "','" + number7.getText().toString() + "','" + number8.getText().toString()
@@ -181,7 +185,10 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                     + "','" + number14.getText().toString() + "','" + number15.getText().toString() + "','" + number16.getText().toString()
                     + "','" + number17.getText().toString() + "','" + number18.getText().toString() + "','" + number19.getText().toString()
                     + "','" + number20.getText().toString() + "','" + number21.getText().toString()+
-                    "','"+extra1.getText().toString() + "','"+extra2.getText().toString()+"','"+ extra3.getText().toString()+ "')";
+                    "','"+extra1.getText().toString() + "','"+extra2.getText().toString()+"','"+ extra3.getText().toString()
+                    +"','"+ String.valueOf(totalDraws)
+                    +"','"+ date
+                    + "')";
 
 
             PreparedStatement preparedStatement = connection.prepareStatement(queryNumbersStatement);
