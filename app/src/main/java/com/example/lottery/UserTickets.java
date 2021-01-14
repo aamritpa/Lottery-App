@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -22,6 +23,9 @@ public class UserTickets extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_tickets);
 
+    }
+    public void draw4UTickets(View view)
+    {
         ListView listView= (ListView) findViewById(R.id.TicketList);
 
         ArrayList<String> ticketList = new ArrayList();
@@ -31,20 +35,40 @@ public class UserTickets extends AppCompatActivity {
         try {
             statement = Login.connection.createStatement();
             ResultSet resultSet = statement.executeQuery("Select * From Game1 Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
-            Boolean userNotFound = true;
-            while (resultSet.next()) {
-                String numberInString ="";
-                for(int i=2;i<=25;i++)
-                {
-                    numberInString=numberInString+"   "+resultSet.getString(i);
+            if(resultSet.next()==true)
+            {
+
+                while (resultSet.next()) {
+                    String numberInString ="Numbers"+"\n\n";
+                    for(int i=2;i<=25;i++)
+                    {
+                        numberInString=numberInString+"   "+resultSet.getString(i);
+                        if(i==8 || i==15)
+                        {
+                            numberInString=numberInString+"\n";
+                        }
+                        if(i==22)
+                        {
+                            numberInString=numberInString+"\n\n";
+                            numberInString=numberInString+"Extras"+"\n";
+                        }
+
+                    }
+                    numberInString=numberInString+"\n\n";
+                    ticketList.add(numberInString);
                 }
-                ticketList.add(numberInString);
+
+            }
+            else
+            {
+                ticketList.add("No Tickets Found!");
+                Toast.makeText(this,"You have not bought any tickets yet",Toast.LENGTH_LONG).show();
             }
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, android.R.id.text1, ticketList);
 
             listView.setAdapter(adapter);
-            Toast.makeText(this,ticketList.get(0).toString(),Toast.LENGTH_LONG).show();
+
         }
         catch (Exception e)
         {

@@ -18,7 +18,7 @@ import java.sql.Statement;
 
 public class Login extends AppCompatActivity {
 
-    private static String ip= "192.168.0.113";
+    private static String ip= "192.168.0.104";
     private static String port ="1433";
     private static String Classes= "net.sourceforge.jtds.jdbc.Driver";
     private static String database ="LoginCredentials";

@@ -415,6 +415,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:padding="10sp"
+            android:text="Logout"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
