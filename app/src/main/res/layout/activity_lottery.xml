@@ -13,11 +13,9 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:background="#336666"
-        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="gone">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
@@ -215,9 +213,11 @@
         android:layout_width="410dp"
         android:layout_height="717dp"
         android:background="#FFFDD0"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuButton">
+        app:layout_constraintTop_toBottomOf="@+id/menuButton"
+        tools:visibility="gone">
 
         <ImageView
             android:id="@+id/imageView6"

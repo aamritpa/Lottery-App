@@ -35,9 +35,8 @@ public class UserTickets extends AppCompatActivity {
         try {
             statement = Login.connection.createStatement();
             ResultSet resultSet = statement.executeQuery("Select * From Game1 Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
-            if(resultSet.next()==true)
+            if(resultSet!=null)
             {
-
                 while (resultSet.next()) {
                     String numberInString ="Numbers"+"\n\n";
                     for(int i=2;i<=25;i++)
@@ -52,7 +51,6 @@ public class UserTickets extends AppCompatActivity {
                             numberInString=numberInString+"\n\n";
                             numberInString=numberInString+"Extras"+"\n";
                         }
-
                     }
                     numberInString=numberInString+"\n\n";
                     ticketList.add(numberInString);
