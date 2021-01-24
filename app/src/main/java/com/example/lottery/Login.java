@@ -18,12 +18,12 @@ import java.sql.Statement;
 
 public class Login extends AppCompatActivity {
 
-    private static String ip= "192.168.0.104";
+    private static String ip= "192.168.1.77";
     private static String port ="1433";
     private static String Classes= "net.sourceforge.jtds.jdbc.Driver";
     private static String database ="LoginCredentials";
     private static String username = "test";
-    private static String password= "test";
+    private static String password= "khalsaraj";
     private static String url = "jdbc:jtds:sqlserver://"+ip+":"+port+"/"+database;
     static Connection connection =null;
     static String userEmail;

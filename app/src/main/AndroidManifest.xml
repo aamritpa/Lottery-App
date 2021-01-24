@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".About"></activity>
+        <activity android:name=".Game2"></activity>
+        <activity android:name=".About" />
         <activity android:name=".Winners" />
         <activity android:name=".Help" />
         <activity android:name=".Wallet" />

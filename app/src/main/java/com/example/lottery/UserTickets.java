@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import java.sql.ResultSet;
@@ -62,11 +66,31 @@ public class UserTickets extends AppCompatActivity {
                 ticketList.add("No Tickets Found!");
                 Toast.makeText(this,"You have not bought any tickets yet",Toast.LENGTH_LONG).show();
             }
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, android.R.id.text1, ticketList);
 
             listView.setAdapter(adapter);
 
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    String value=adapter.getItem(position);
+                    Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
+
+                    ScrollView ticketScrollView = (ScrollView) findViewById(R.id.TicketScrollView);
+                    ticketScrollView.setVisibility(View.GONE);
+
+                    Button draw4U = (Button) findViewById(R.id.Draw4UTickets);
+                    draw4U.setVisibility(View.GONE);
+
+                    Button draw4State = (Button) findViewById(R.id.Draw4StateTickets);
+                    draw4State.setVisibility(View.GONE);
+
+                    GridLayout layoutTicketStatus= (GridLayout) findViewById(R.id.layoutTicketStatus);
+                    layoutTicketStatus.setVisibility(View.VISIBLE);
+
+                }
+            });
         }
         catch (Exception e)
         {
