@@ -34,6 +34,9 @@ public class Lottery extends AppCompatActivity {
         else if(view.getId()==R.id.game2)
         {
             Toast.makeText(this,"Game2",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(),Game2.class);
+            intent.putExtra("email",userEmail);
+            startActivity(intent);
 
         }
     }
@@ -46,12 +49,12 @@ public class Lottery extends AppCompatActivity {
             if(menuLayout.getVisibility()==View.VISIBLE)
             {
                 menuLayout.setVisibility(View.GONE);
-                lottoLayout.setVisibility(View.VISIBLE);
+                //lottoLayout.setVisibility(View.VISIBLE);
             }
             else if(menuLayout.getVisibility()==View.GONE || menuLayout.getVisibility()==View.INVISIBLE)
             {
                 menuLayout.setVisibility(View.VISIBLE);
-                lottoLayout.setVisibility(View.GONE);
+                //lottoLayout.setVisibility(View.GONE);
             }
         }
         else if(view.getId()==R.id.homeButton || view.getId()==R.id.homeIcon)
@@ -90,4 +93,6 @@ public class Lottery extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    @Override
+    public void onBackPressed() {}
 }

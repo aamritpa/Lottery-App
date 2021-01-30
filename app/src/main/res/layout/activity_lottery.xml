@@ -210,38 +210,39 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/menuToolbar"
-        android:layout_width="410dp"
-        android:layout_height="717dp"
+        android:layout_width="255dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="156dp"
         android:background="#FFFDD0"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuButton"
         tools:visibility="gone">
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="194dp"
-            android:layout_height="129dp"
+            android:layout_width="169dp"
+            android:layout_height="131dp"
             app:layout_column="0"
             app:layout_row="0"
-            app:srcCompat="@drawable/bonanza" />
+            app:srcCompat="@drawable/bigdraw_character" />
 
         <ImageView
             android:id="@+id/homeIcon"
-            android:layout_width="217dp"
+            android:layout_width="85dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_right_bottom"
             android:onClick="goToMenu"
             android:padding="10sp"
             app:layout_column="1"
-            app:layout_gravity="center"
+            app:layout_gravity="left"
             app:layout_row="1"
             app:srcCompat="@drawable/house" />
 
         <ImageView
             android:id="@+id/myProfileIcon"
-            android:layout_width="217dp"
+            android:layout_width="85dp"
             android:layout_height="50dp"
             android:background="@drawable/border_right"
             android:onClick="goToMenu"
@@ -253,7 +254,7 @@
 
         <ImageView
             android:id="@+id/TicketsIcon"
-            android:layout_width="217dp"
+            android:layout_width="85dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_right_bottom"
             android:onClick="goToMenu"
@@ -265,7 +266,7 @@
 
         <ImageView
             android:id="@+id/walletIcon"
-            android:layout_width="217dp"
+            android:layout_width="85dp"
             android:layout_height="50dp"
             android:background="@drawable/border_right"
             android:onClick="goToMenu"
@@ -277,8 +278,8 @@
 
         <ImageView
             android:id="@+id/winnerIcon"
-            android:layout_width="217dp"
-            android:layout_height="49dp"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
             android:background="@drawable/border_right"
             android:onClick="goToMenu"
             android:padding="8sp"
@@ -289,7 +290,7 @@
 
         <ImageView
             android:id="@+id/aboutIcon"
-            android:layout_width="217dp"
+            android:layout_width="85dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_right_bottom"
             android:onClick="goToMenu"
@@ -301,7 +302,7 @@
 
         <ImageView
             android:id="@+id/helpIcon"
-            android:layout_width="217dp"
+            android:layout_width="85dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_right_bottom"
             android:onClick="goToMenu"
@@ -313,7 +314,7 @@
 
         <TextView
             android:id="@+id/homeButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_left_bottom"
             android:gravity="center"
@@ -327,7 +328,7 @@
 
         <TextView
             android:id="@+id/myProfileButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_left"
             android:gravity="center"
@@ -341,7 +342,7 @@
 
         <TextView
             android:id="@+id/TicketsButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_left_bottom"
             android:gravity="center"
@@ -355,7 +356,7 @@
 
         <TextView
             android:id="@+id/walletButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_left"
             android:gravity="center"
@@ -369,7 +370,7 @@
 
         <TextView
             android:id="@+id/helpButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_left_bottom"
             android:gravity="center"
@@ -383,7 +384,7 @@
 
         <TextView
             android:id="@+id/winnerButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_left"
             android:gravity="center"
@@ -397,7 +398,7 @@
 
         <TextView
             android:id="@+id/aboutButton"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@drawable/border_top_left_bottom"
             android:gravity="center"
@@ -411,7 +412,7 @@
 
         <TextView
             android:id="@+id/textView25"
-            android:layout_width="194dp"
+            android:layout_width="170dp"
             android:layout_height="50dp"
             android:gravity="center"
             android:padding="10sp"

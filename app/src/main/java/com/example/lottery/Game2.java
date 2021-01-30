@@ -1,11 +1,14 @@
 package com.example.lottery;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.gridlayout.widget.GridLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,12 +30,7 @@ public class Game2 extends AppCompatActivity {
 
 
     /* For Extra Numbers */
-
-    int extraCount=0;
-    TextView extra1;
-    TextView extra2;
-    TextView extra3;
-    Boolean extraExists;
+    ArrayList listExtras= new ArrayList(3);;
 
 
     @Override
@@ -226,9 +224,7 @@ public class Game2 extends AppCompatActivity {
         }
     }
 
-
-
-    public void setRandomNumber(View view)
+    public void setRandomNumberGame2(View view)
     {
         countSelected=7;
         number1=(TextView) findViewById(R.id.selectedNumber1);
@@ -274,42 +270,25 @@ public class Game2 extends AppCompatActivity {
             numbers.setBackgroundColor(Color.parseColor("#256B85"));
         }
 
-        //Random number generator for Extras
+    }
+    public void onConfirmGame2(View view){
+        if(countSelected==7)
+        {
+            //Random number generator for Extras
+            Random random= new Random();
+            int countRandomNumberExtra=1;
+            while(countRandomNumberExtra<=3) {
+                int num = random.nextInt(26) + 65;
 
+                //converting integer to char (ASCII)
+                String charValue = Character.toString((char)num);
+                if (!listExtras.contains(charValue)) {
+                    listExtras.add(charValue);
+                    countRandomNumberExtra = countRandomNumberExtra + 1;
+                }
 
-        for (int i = 65; i <= 90; i++) {
-            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + Character.toString((char)i), "id",
-                    this.getPackageName()));
-            numbers.setBackgroundColor(Color.parseColor("#C0C0C0"));
-        }
-
-
-        ArrayList listExtras= new ArrayList(3);
-        int countRandomNumberExtra=1;
-        while(countRandomNumberExtra<=3) {
-            int num = random.nextInt(26) + 65;
-
-            //converting integer to char (ASCII)
-            String charValue = Character.toString((char)num);
-            if (!listExtras.contains(charValue)) {
-                listExtras.add(charValue);
-                countRandomNumberExtra = countRandomNumberExtra + 1;
             }
 
-        }
-        extra1.setText(listExtras.get(0).toString());
-        extra2.setText(listExtras.get(1).toString());
-        extra3.setText(listExtras.get(2).toString());
-
-        for (int i = 0; i <= 2; i++) {
-            TextView numbers = (TextView) findViewById(getResources().getIdentifier("number" + listExtras.get(i), "id",
-                    this.getPackageName()));
-            numbers.setBackgroundColor(Color.parseColor("#256B85"));
-        }
-    }
-    public void onConfirm(View view){
-        if((countSelected==7 && extraCount==0) || (countSelected==7 && extraCount==3) )
-        {
             TextView amount= (TextView) findViewById(R.id.game2amount);
             TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
             Intent intent= new Intent(getApplicationContext(),Payment.class);
@@ -320,20 +299,73 @@ public class Game2 extends AppCompatActivity {
             intent.putExtra("number5",number5.getText().toString());
             intent.putExtra("number6",number6.getText().toString());
             intent.putExtra("number7",number7.getText().toString());
-            intent.putExtra("extra1",extra1.getText().toString());
-            intent.putExtra("extra2",extra2.getText().toString());
-            intent.putExtra("extra3",extra3.getText().toString());
+            intent.putExtra("extra1",listExtras.get(0).toString());
+            intent.putExtra("extra2",listExtras.get(1).toString());
+            intent.putExtra("extra3",listExtras.get(2).toString());
             intent.putExtra("amount",amount.getText().toString());
             intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
-
-
-
-
+            intent.putExtra("gameStatus",1); //0 means game1, 1 means game2
             startActivity(intent);
         }
         else
         {
             Toast.makeText(this, "Select Minimum Numbers!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void goToMenu(View view)
+    {
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbarGame2);
+        Button random= (Button) findViewById(R.id.game2random);
+        if(view.getId()==R.id.menuButtonGame2)
+        {
+            if(menuLayout.getVisibility()==View.VISIBLE)
+            {
+                menuLayout.setVisibility(View.GONE);
+                random.setVisibility(View.VISIBLE);
+            }
+            else if(menuLayout.getVisibility()==View.GONE || menuLayout.getVisibility()==View.INVISIBLE)
+            {
+                menuLayout.setVisibility(View.VISIBLE);
+                random.setVisibility(View.INVISIBLE);
+            }
+        }
+        else if(view.getId()==R.id.homeButton || view.getId()==R.id.homeIcon)
+        {
+            menuLayout.setVisibility(View.GONE);
+            random.setVisibility(View.VISIBLE);
+            Intent intent =new Intent(getApplicationContext(),Lottery.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.myProfileButton || view.getId()==R.id.myProfileIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Profile.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.TicketsButton || view.getId()==R.id.TicketsIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),UserTickets.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.walletButton || view.getId()==R.id.walletIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Wallet.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.helpButton || view.getId()==R.id.helpIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Help.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.winnerButton || view.getId()==R.id.winnerIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Winners.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.aboutButton || view.getId()==R.id.aboutIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),About.class);
+            startActivity(intent);
         }
     }
 }

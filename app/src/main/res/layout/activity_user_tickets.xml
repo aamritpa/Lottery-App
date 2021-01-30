@@ -11,10 +11,11 @@
         android:id="@+id/Draw4UTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:onClick="draw4UTickets"
         android:text="Draw4U"
         app:layout_constraintEnd_toStartOf="@+id/Draw4StateTickets"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,19 +23,22 @@
         android:id="@+id/Draw4StateTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="60dp"
         android:text="Draw4State"
-        app:layout_constraintBottom_toBottomOf="@+id/Draw4UTickets"
+        app:layout_constraintBottom_toTopOf="@+id/TicketList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
         android:id="@+id/TicketScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="566dp"
+        android:layout_width="407dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Draw4UTickets">
 
@@ -43,11 +47,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ListView
-                android:id="@+id/TicketList"
-                android:layout_width="match_parent"
-                android:layout_height="580dp"
-                android:background="@android:color/black" />
         </LinearLayout>
     </ScrollView>
 
@@ -134,4 +133,15 @@
             android:text="NOT DRAWN YET"
             android:textColor="@android:color/black" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <ListView
+        android:id="@+id/TicketList"
+        android:layout_width="406dp"
+        android:layout_height="585dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Draw4UTickets" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,8 +37,11 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     Button payButton;
     String amount;
     int totalDraws;
+    int gameStatus=0; //Which game it is?
 
-    TextView number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21;
+    TextView number1,number2,number3,number4,number5,number6,
+            number7,number8,number9,number10,number11,number12,number13,number14
+            ,number15,number16,number17,number18,number19,number20,number21;
     TextView extra1,extra2,extra3;
 
 
@@ -73,6 +76,8 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
         number7 = (TextView)findViewById(R.id.finalizedNumber7);
         number7.setText(intent.getStringExtra("number7"));
+
+        gameStatus=Integer.valueOf(intent.getStringExtra("number7"));
 
         /* Filling the second row of numbers */
         ArrayList arrayListNumbers= new ArrayList(7);
@@ -174,8 +179,16 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         Toast.makeText(this,date,Toast.LENGTH_LONG).show(); //Storing the date when the ticket is bought
         try {
-
-            String queryNumbersStatement = "Insert into Game1" +
+            String game;
+            if(gameStatus==0)
+            {
+                game= " Game1 ";
+            }
+            else
+            {
+                game= " Game2 ";
+            }
+            String queryNumbersStatement = "Insert into "+ game.toString() +
                     " (email,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,extra1,extra2,extra3,draws,purchasedDate) values "
                     + "('" + Login.userEmail.toString() + "','" + number1.getText().toString() + "','" + number2.getText().toString() +
                     "','" + number3.getText().toString() + "','" + number4.getText().toString() + "','" + number5.getText().toString()

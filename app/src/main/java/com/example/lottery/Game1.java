@@ -1,6 +1,7 @@
 package com.example.lottery;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.gridlayout.widget.GridLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -415,15 +417,70 @@ public class Game1 extends AppCompatActivity {
             intent.putExtra("extra3",extra3.getText().toString());
             intent.putExtra("amount",amount.getText().toString());
             intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
-
-
-
-
+            intent.putExtra("gameStatus",0);//0 means this is game1, 1 means its game2
             startActivity(intent);
         }
         else
         {
             Toast.makeText(this, "Select Minimum Numbers!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    public void goToMenu(View view)
+    {
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbarGame1);
+        Button random= (Button) findViewById(R.id.game1random);
+
+        if(view.getId()==R.id.menuButtonGame1)
+        {
+            if(menuLayout.getVisibility()==View.VISIBLE)
+            {
+                menuLayout.setVisibility(View.GONE);
+                random.setVisibility(View.VISIBLE);
+            }
+            else if(menuLayout.getVisibility()==View.GONE || menuLayout.getVisibility()==View.INVISIBLE)
+            {
+                menuLayout.setVisibility(View.VISIBLE);
+                random.setVisibility(View.INVISIBLE);
+            }
+        }
+        else if(view.getId()==R.id.homeButton || view.getId()==R.id.homeIcon)
+        {
+            menuLayout.setVisibility(View.GONE);
+            random.setVisibility(View.VISIBLE);
+            Intent intent =new Intent(getApplicationContext(),Lottery.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.myProfileButton || view.getId()==R.id.myProfileIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Profile.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.TicketsButton || view.getId()==R.id.TicketsIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),UserTickets.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.walletButton || view.getId()==R.id.walletIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Wallet.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.helpButton || view.getId()==R.id.helpIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Help.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.winnerButton || view.getId()==R.id.winnerIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),Winners.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.aboutButton || view.getId()==R.id.aboutIcon)
+        {
+            Intent intent = new Intent(getApplicationContext(),About.class);
+            startActivity(intent);
         }
     }
 }
