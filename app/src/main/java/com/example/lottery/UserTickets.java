@@ -42,7 +42,7 @@ public class UserTickets extends AppCompatActivity {
             if(resultSet!=null)
             {
                 while (resultSet.next()) {
-                    String numberInString ="Numbers"+"\n\n";
+                    String numberInString ="\n"+" Numbers "+"\n\n";
                     for(int i=2;i<=25;i++)
                     {
                         numberInString=numberInString+"   "+resultSet.getString(i);
@@ -53,7 +53,7 @@ public class UserTickets extends AppCompatActivity {
                         if(i==22)
                         {
                             numberInString=numberInString+"\n\n";
-                            numberInString=numberInString+"Extras"+"\n";
+                            numberInString=numberInString+" Extras "+"\n";
                         }
                     }
                     numberInString=numberInString+"\n\n";
@@ -64,7 +64,7 @@ public class UserTickets extends AppCompatActivity {
             else
             {
                 ticketList.add("No Tickets Found!");
-                Toast.makeText(this,"You have not bought any tickets yet",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"No Tickets Found",Toast.LENGTH_LONG).show();
             }
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, android.R.id.text1, ticketList);
@@ -75,19 +75,10 @@ public class UserTickets extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     String value=adapter.getItem(position);
-                    Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
-
-                    ScrollView ticketScrollView = (ScrollView) findViewById(R.id.TicketScrollView);
-                    ticketScrollView.setVisibility(View.GONE);
-
-                    Button draw4U = (Button) findViewById(R.id.Draw4UTickets);
-                    draw4U.setVisibility(View.GONE);
-
-                    Button draw4State = (Button) findViewById(R.id.Draw4StateTickets);
-                    draw4State.setVisibility(View.GONE);
-
-                    GridLayout layoutTicketStatus= (GridLayout) findViewById(R.id.layoutTicketStatus);
-                    layoutTicketStatus.setVisibility(View.VISIBLE);
+                    Intent userTicketStatus = new Intent(getApplicationContext(),UserTicketsStatus.class);
+                    userTicketStatus.putExtra("numbers",value.toString());  //Sending email to next activity
+                    userTicketStatus.putExtra("gameType","Draw4U");
+                    startActivity(userTicketStatus);
 
                 }
             });

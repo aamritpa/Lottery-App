@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.icu.util.LocaleData;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,7 +22,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
@@ -176,20 +182,20 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
     @Override
     public void onPaymentSuccess(String s) {
-        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        Toast.makeText(this,date,Toast.LENGTH_LONG).show(); //Storing the date when the ticket is bought
+        String datePurchased = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+
+        LocalDate date = LocalDate.now();
+        String drawDate= date.with(TemporalAdjusters.next(DayOfWeek.FRIDAY)).toString();
         try {
             String game;
-            if(gameStatus==0)
-            {
+            if(gameStatus==0) {
                 game= " Game1 ";
             }
-            else
-            {
+            else {
                 game= " Game2 ";
             }
             String queryNumbersStatement = "Insert into "+ game.toString() +
-                    " (email,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,extra1,extra2,extra3,draws,purchasedDate) values "
+                    " (email,number1,number2,number3,number4,number5,number6,number7,number8,number9,number10,number11,number12,number13,number14,number15,number16,number17,number18,number19,number20,number21,extra1,extra2,extra3,draws,purchasedDate,gameStatus,drawDate,amountWin) values "
                     + "('" + Login.userEmail.toString() + "','" + number1.getText().toString() + "','" + number2.getText().toString() +
                     "','" + number3.getText().toString() + "','" + number4.getText().toString() + "','" + number5.getText().toString()
                     + "','" + number6.getText().toString() + "','" + number7.getText().toString() + "','" + number8.getText().toString()
@@ -200,7 +206,10 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                     + "','" + number20.getText().toString() + "','" + number21.getText().toString()+
                     "','"+extra1.getText().toString() + "','"+extra2.getText().toString()+"','"+ extra3.getText().toString()
                     +"','"+ String.valueOf(totalDraws)
-                    +"','"+ date
+                    +"','"+ datePurchased
+                    +"','"+ "0"
+                    +"','"+ drawDate
+                    +"','"+ "0"
                     + "')";
 
 

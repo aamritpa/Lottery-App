@@ -73,7 +73,11 @@ public class Login extends AppCompatActivity {
                             userNotFound=false;
                             Intent intent= new Intent(getApplicationContext(),Lottery.class);
                             intent.putExtra("email",userEmail);  //Sending email to next activity
+                            //Closing The Activity
                             startActivity(intent);
+                            //close the current activity
+                            Login.this.finish();
+
                         }
                         else{
                             userNotFound=false;

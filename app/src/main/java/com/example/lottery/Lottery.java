@@ -10,6 +10,17 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import net.sourceforge.jtds.jdbc.DateTime;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
+import java.time.temporal.WeekFields;
+import java.util.Date;
+import java.util.Locale;
+
 public class Lottery extends AppCompatActivity {
 
     String userEmail;
@@ -26,14 +37,12 @@ public class Lottery extends AppCompatActivity {
     {
         if(view.getId()==R.id.game1)
         {
-            Toast.makeText(this,"Game1",Toast.LENGTH_LONG).show();
             Intent intent = new Intent(getApplicationContext(),Game1.class);
             intent.putExtra("email",userEmail);
             startActivity(intent);
         }
         else if(view.getId()==R.id.game2)
         {
-            Toast.makeText(this,"Game2",Toast.LENGTH_LONG).show();
             Intent intent = new Intent(getApplicationContext(),Game2.class);
             intent.putExtra("email",userEmail);
             startActivity(intent);
