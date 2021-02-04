@@ -10,16 +10,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import net.sourceforge.jtds.jdbc.DateTime;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.temporal.TemporalAdjusters;
-import java.time.temporal.WeekFields;
 import java.util.Date;
-import java.util.Locale;
 
 public class Lottery extends AppCompatActivity {
 

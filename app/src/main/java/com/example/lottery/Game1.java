@@ -417,7 +417,7 @@ public class Game1 extends AppCompatActivity {
             intent.putExtra("extra3",extra3.getText().toString());
             intent.putExtra("amount",amount.getText().toString());
             intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
-            intent.putExtra("gameStatus",0);//0 means this is game1, 1 means its game2
+            intent.putExtra("gameType","0");//0 means this is game1, 1 means its game2
             startActivity(intent);
         }
         else

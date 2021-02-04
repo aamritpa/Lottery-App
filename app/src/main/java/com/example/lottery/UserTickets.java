@@ -22,6 +22,11 @@ import java.util.List;
 
 public class UserTickets extends AppCompatActivity {
 
+    private String gameStatus;
+    private String winningAmount;
+    private String drawDate;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,17 +48,31 @@ public class UserTickets extends AppCompatActivity {
             {
                 while (resultSet.next()) {
                     String numberInString ="\n"+" Numbers "+"\n\n";
-                    for(int i=2;i<=25;i++)
+                    for(int i=2;i<=30;i++)
                     {
-                        numberInString=numberInString+"   "+resultSet.getString(i);
+                        if(i>=2 && i<=25)
+                        {
+                            numberInString=numberInString+"   "+resultSet.getString(i);
+                        }
                         if(i==8 || i==15)
                         {
                             numberInString=numberInString+"\n";
                         }
-                        if(i==22)
+                        else if(i==22)
                         {
                             numberInString=numberInString+"\n\n";
                             numberInString=numberInString+" Extras "+"\n";
+                        }
+                        else if(i==28){
+                            gameStatus=resultSet.getString(i);
+                        }
+                        else if(i==29)
+                        {
+                            drawDate=resultSet.getString(i);
+                        }
+                        else if(i==30)
+                        {
+                            winningAmount=resultSet.getString(i);
                         }
                     }
                     numberInString=numberInString+"\n\n";
@@ -78,6 +97,9 @@ public class UserTickets extends AppCompatActivity {
                     Intent userTicketStatus = new Intent(getApplicationContext(),UserTicketsStatus.class);
                     userTicketStatus.putExtra("numbers",value.toString());  //Sending email to next activity
                     userTicketStatus.putExtra("gameType","Draw4U");
+                    userTicketStatus.putExtra("gameStatus",gameStatus.toString());
+                    userTicketStatus.putExtra("winningAmount",winningAmount.toString());
+                    userTicketStatus.putExtra("drawDate",drawDate.toString());
                     startActivity(userTicketStatus);
 
                 }

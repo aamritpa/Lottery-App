@@ -43,7 +43,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     Button payButton;
     String amount;
     int totalDraws;
-    int gameStatus=0; //Which game it is?
+    String gameType="0"; //Which game it is?
 
     TextView number1,number2,number3,number4,number5,number6,
             number7,number8,number9,number10,number11,number12,number13,number14
@@ -83,7 +83,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
         number7 = (TextView)findViewById(R.id.finalizedNumber7);
         number7.setText(intent.getStringExtra("number7"));
 
-        gameStatus=Integer.valueOf(intent.getStringExtra("number7"));
+        gameType=intent.getStringExtra("gameType");
 
         /* Filling the second row of numbers */
         ArrayList arrayListNumbers= new ArrayList(7);
@@ -183,12 +183,11 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
     @Override
     public void onPaymentSuccess(String s) {
         String datePurchased = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-
         LocalDate date = LocalDate.now();
         String drawDate= date.with(TemporalAdjusters.next(DayOfWeek.FRIDAY)).toString();
         try {
             String game;
-            if(gameStatus==0) {
+            if(gameType.toString().equals("0")) {
                 game= " Game1 ";
             }
             else {
