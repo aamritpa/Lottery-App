@@ -8,14 +8,12 @@
 
     <GridLayout
         android:id="@+id/gridView"
-        android:layout_width="363dp"
-        android:layout_height="411dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="360dp"
+        android:layout_height="499dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
 
         <TextView
@@ -24,72 +22,72 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="0"
-            android:text="Name"
-            android:textSize="20sp" />
+            android:text="First Name"
+            android:textSize="17sp" />
+
 
         <TextView
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="1"
+            android:layout_row="2"
             android:layout_column="0"
             android:text="Email"
-            android:textSize="20sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="2"
+            android:layout_row="3"
             android:layout_column="0"
             android:text="@string/password"
-            android:textSize="20sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/confirmPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="3"
+            android:layout_row="4"
             android:layout_column="0"
             android:text="@string/confirm_password"
-            android:textSize="20sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="4"
+            android:layout_row="6"
             android:layout_column="0"
             android:text="Address"
-            android:textSize="20sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="5"
+            android:layout_row="7"
             android:layout_column="0"
             android:text="City"
-            android:textSize="20sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="6"
+            android:layout_row="8"
             android:layout_column="0"
             android:text="Country"
-            android:textSize="20sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="7"
+            android:layout_row="9"
             android:layout_column="0"
             android:text="Age"
-            android:textSize="20sp" />
-
+            android:textSize="17sp" />
 
         <EditText
             android:id="@+id/userName"
@@ -104,7 +102,7 @@
             android:id="@+id/userEmail"
             android:layout_width="169dp"
             android:layout_height="wrap_content"
-            android:layout_row="1"
+            android:layout_row="2"
             android:layout_column="1"
             android:ems="10"
             android:inputType="textPersonName" />
@@ -113,7 +111,7 @@
             android:id="@+id/userPassword"
             android:layout_width="171dp"
             android:layout_height="wrap_content"
-            android:layout_row="2"
+            android:layout_row="3"
             android:layout_column="1"
             android:ems="10"
             android:inputType="textPassword" />
@@ -122,7 +120,7 @@
             android:id="@+id/userConfirmPassword"
             android:layout_width="171dp"
             android:layout_height="wrap_content"
-            android:layout_row="3"
+            android:layout_row="4"
             android:layout_column="1"
             android:ems="10"
             android:inputType="textPassword" />
@@ -131,7 +129,7 @@
             android:id="@+id/userAddress"
             android:layout_width="169dp"
             android:layout_height="wrap_content"
-            android:layout_row="4"
+            android:layout_row="6"
             android:layout_column="1"
             android:ems="10"
             android:inputType="textPersonName" />
@@ -140,7 +138,7 @@
             android:id="@+id/userCity"
             android:layout_width="169dp"
             android:layout_height="wrap_content"
-            android:layout_row="5"
+            android:layout_row="7"
             android:layout_column="1"
             android:ems="10"
             android:inputType="textPersonName" />
@@ -149,7 +147,7 @@
             android:id="@+id/userCountry"
             android:layout_width="169dp"
             android:layout_height="wrap_content"
-            android:layout_row="6"
+            android:layout_row="8"
             android:layout_column="1"
             android:ems="10"
             android:inputType="textPersonName" />
@@ -158,10 +156,44 @@
             android:id="@+id/userAge"
             android:layout_width="169dp"
             android:layout_height="wrap_content"
-            android:layout_row="7"
+            android:layout_row="9"
             android:layout_column="1"
             android:ems="10"
             android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="Last Name"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/lastNameProfile"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:text="Phone Number"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/userPhoneNumber"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
     </GridLayout>
 
@@ -184,7 +216,7 @@
         android:id="@+id/button2"
         android:layout_width="335dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="36dp"
         android:onClick="goToSignIn"
         android:text="Already Have Account? Sign In Instead"
         app:layout_constraintBottom_toBottomOf="parent"

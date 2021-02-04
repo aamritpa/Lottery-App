@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="#CFCDCD"
     tools:context=".Profile">
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout5"
-        android:layout_width="389dp"
-        android:layout_height="408dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287">
+        app:layout_constraintVertical_bias="0.094">
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10sp"
-            android:text="Name"
+            android:text="First Name"
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView17"
@@ -33,130 +36,105 @@
             android:padding="10sp"
             android:text="Email"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="1" />
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/firstnameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/phoneNumberProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_column="1"
+            app:layout_row="3" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10sp"
-            android:text="Address"
+            android:text="Last Name"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="0"
-            app:layout_row="2" />
+            app:layout_row="1" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10sp"
-            android:text="City"
+            android:text="Phone Number"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="0"
             app:layout_row="3" />
 
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:text="Country"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="0"
-            app:layout_row="4" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:text="Age"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="0"
-            app:layout_row="5" />
-
         <EditText
-            android:id="@+id/nameProfile"
+            android:id="@+id/lastNameProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="Name"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_row="0" />
-
-        <EditText
-            android:id="@+id/addressProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_row="2" />
-
-        <EditText
-            android:id="@+id/cityProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_row="3" />
-
-        <EditText
-            android:id="@+id/countryProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_row="4" />
-
-        <EditText
-            android:id="@+id/ageProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_column="1"
-            app:layout_row="5" />
-
-        <TextView
-            android:id="@+id/emailProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_row="1" />
 
+        <TextView
+            android:id="@+id/emailAddressProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_column="1"
+            app:layout_row="2" />
+
     </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/white"
+        android:text="Change your password"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveProfile"
+        app:layout_constraintVertical_bias="0.174" />
 
     <Button
         android:id="@+id/saveProfile"
         android:layout_width="175dp"
         android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="12dp"
         android:background="#4CBB17"
         android:onClick="saveProfile"
         android:text="SAVE"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

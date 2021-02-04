@@ -17,12 +17,10 @@ import static com.example.lottery.Login.connection;
 
 public class Profile extends AppCompatActivity {
 
-    TextView name;
+    TextView firstName;
+    TextView lastName;
     TextView email;
-    TextView address;
-    TextView city;
-    TextView country;
-    TextView age;
+    TextView phoneNumber;
 
 
     @Override
@@ -30,12 +28,11 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        name = (TextView)findViewById(R.id.nameProfile);
-        email = (TextView)findViewById(R.id.emailProfile);
-        address = (TextView)findViewById(R.id.addressProfile);
-        city = (TextView)findViewById(R.id.cityProfile);
-        country = (TextView)findViewById(R.id.countryProfile);
-        age = (TextView)findViewById(R.id.ageProfile);
+        firstName = (TextView)findViewById(R.id.firstnameProfile);
+        lastName=(TextView)findViewById(R.id.lastNameProfile);
+        email = (TextView)findViewById(R.id.emailAddressProfile);
+        phoneNumber = (TextView)findViewById(R.id.phoneNumberProfile);
+
 
         Statement statement =null;
         try {
@@ -44,12 +41,10 @@ public class Profile extends AppCompatActivity {
             ResultSet resultSet = statement.executeQuery("Select * From Registered Where userEmail="+"\'"+Login.userEmail.toString()+"\'"+";");
 
             while (resultSet.next()) {
-                name.setText(resultSet.getString(1));
+                firstName.setText(resultSet.getString(1));
+                lastName.setText(resultSet.getString(8));
                 email.setText(resultSet.getString(2));
-                address.setText(resultSet.getString(4));
-                city.setText(resultSet.getString(5));
-                country.setText(resultSet.getString(6));
-                age.setText(resultSet.getString(7));
+                phoneNumber.setText(resultSet.getString(9));
             }
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -60,11 +55,9 @@ public class Profile extends AppCompatActivity {
     {
 
         String queryStatement = "UPDATE Registered Set "+
-                "userName="+"\'"+name.getText().toString()+"\'" +","
-                +"userAddress="+"\'"+address.getText().toString()+"\'"+ ","
-                +"userCity="+"\'"+city.getText().toString()+"\'"+ ","
-                +"userCountry="+"\'"+country.getText().toString()+"\'"+ ","
-                +"userAge="+age.getText().toString()
+                "userName="+"\'"+firstName.getText().toString()+"\'" +","
+                +"userLastName="+"\'"+lastName.getText().toString()+"\'"+ ","
+                +"userPhoneNumber="+"\'"+phoneNumber.getText().toString()+"\'"+ ","
                 +"Where userAge=18;";
 
         try {

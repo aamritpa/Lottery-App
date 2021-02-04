@@ -48,7 +48,7 @@
             android:id="@+id/Draw4UTickets"
             android:layout_width="205dp"
             android:layout_height="50dp"
-            android:onClick="draw4UTickets"
+            android:onClick="Tickets"
             android:text="Draw4U"
             app:layout_column="0"
             app:layout_row="0" />
@@ -57,6 +57,7 @@
             android:id="@+id/Draw4StateTickets"
             android:layout_width="205dp"
             android:layout_height="wrap_content"
+            android:onClick="Tickets"
             android:text="Draw4State"
             app:layout_column="1"
             app:layout_row="0" />

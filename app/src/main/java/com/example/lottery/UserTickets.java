@@ -33,7 +33,7 @@ public class UserTickets extends AppCompatActivity {
         setContentView(R.layout.activity_user_tickets);
 
     }
-    public void draw4UTickets(View view)
+    public void Tickets(View view)
     {
         ListView listView= (ListView) findViewById(R.id.TicketList);
 
@@ -43,7 +43,17 @@ public class UserTickets extends AppCompatActivity {
         //This SQL Statement is not efficient. For large number of users we will change it to better efficient algorithm.
         try {
             statement = Login.connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("Select * From Game1 Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
+            String gameType="";
+            if(view.getId()==R.id.Draw4UTickets)
+            {
+                gameType= " Game1 ";
+            }
+            else if(view.getId()==R.id.Draw4StateTickets)
+            {
+                gameType= " Game2 ";
+            }
+
+            ResultSet resultSet = statement.executeQuery("Select * From "+ gameType +"Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
             if(resultSet!=null)
             {
                 while (resultSet.next()) {

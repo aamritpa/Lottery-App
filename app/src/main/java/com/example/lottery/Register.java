@@ -51,9 +51,11 @@ public class Register extends AppCompatActivity {
         startActivity(intent);
     }
     public void onRegister(View view) throws SQLException {
-        TextView name = (TextView) findViewById(R.id.userName);
-        Log.i("Name",name.getText().toString());
-        String userName= name.getText().toString();
+        TextView firstName = (TextView) findViewById(R.id.userName);
+        String userName= firstName.getText().toString();
+
+        TextView lastName = (TextView) findViewById(R.id.lastNameProfile);
+        String userLastName= lastName.getText().toString();
 
         TextView email = (TextView) findViewById(R.id.userEmail);
         Log.i("Email",email.getText().toString());
@@ -66,6 +68,9 @@ public class Register extends AppCompatActivity {
         EditText confirmPassword = (EditText) findViewById(R.id.userConfirmPassword);
         String userConfirmPassword=  confirmPassword.getText().toString();
         Log.i("Confirm Password",userConfirmPassword);
+
+        TextView phoneNumber = (TextView) findViewById(R.id.userPhoneNumber);
+        String userPhoneNumber= phoneNumber.getText().toString();
 
         TextView address = (TextView) findViewById(R.id.userAddress);
         Log.i("Address",address.getText().toString());
@@ -103,9 +108,9 @@ public class Register extends AppCompatActivity {
             Statement statement=null;
 
             String queryStatement = "Insert into Registered " +
-                    " (userName,userEmail,userPassword,userAddress,userCity,userCountry,userAge) values "
+                    " (userName,userEmail,userPassword,userAddress,userCity,userCountry,userAge,userLastName,userPhoneNumber) values "
                     + "('" + userName + "','" + userEmail + "','" + userPassword + "','" + userAddress+
-                    "','"+userCity+ "','"+userCountry+"','"+userAge+ "')";
+                    "','"+userCity+ "','"+userCountry+"','"+userAge+ "','"+userLastName+ "','"+userPhoneNumber+  "')";
 
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(queryStatement);
@@ -113,9 +118,11 @@ public class Register extends AppCompatActivity {
                 //Log.i("Statement",String.valueOf(preparedStatement.executeUpdate()));
                 preparedStatement.close();
                 Toast.makeText(this,"Registered Successfully!",Toast.LENGTH_LONG).show();
-                name.setText(null);
+                firstName.setText(null);
+                lastName.setText(null);
                 email.setText(null);
                 password.setText(null);
+                phoneNumber.setText(null);
                 confirmPassword.setText(null);
                 address.setText(null);
                 city.setText(null);
