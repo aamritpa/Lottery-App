@@ -28,17 +28,20 @@ public class Lottery extends AppCompatActivity {
     }
     public void goToGame(View view)
     {
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbar);
         if(view.getId()==R.id.game1)
         {
             Intent intent = new Intent(getApplicationContext(),Game1.class);
             intent.putExtra("email",userEmail);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.game2)
         {
             Intent intent = new Intent(getApplicationContext(),Game2.class);
             intent.putExtra("email",userEmail);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
 
         }
     }
@@ -66,33 +69,45 @@ public class Lottery extends AppCompatActivity {
         }
         else if(view.getId()==R.id.myProfileButton || view.getId()==R.id.myProfileIcon)
         {
+
             Intent intent = new Intent(getApplicationContext(),Profile.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.TicketsButton || view.getId()==R.id.TicketsIcon)
         {
+
             Intent intent = new Intent(getApplicationContext(),UserTickets.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.walletButton || view.getId()==R.id.walletIcon)
         {
+
             Intent intent = new Intent(getApplicationContext(),Wallet.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.helpButton || view.getId()==R.id.helpIcon)
         {
+
             Intent intent = new Intent(getApplicationContext(),Help.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.winnerButton || view.getId()==R.id.winnerIcon)
         {
+
             Intent intent = new Intent(getApplicationContext(),Winners.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.aboutButton || view.getId()==R.id.aboutIcon)
         {
+
             Intent intent = new Intent(getApplicationContext(),About.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
     }
     @Override

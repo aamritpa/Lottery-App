@@ -931,7 +931,7 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="415dp"
+        android:layout_width="match_parent"
         android:layout_height="47dp"
         android:background="@android:color/white"
         android:foregroundGravity="bottom"
@@ -1072,8 +1072,8 @@
 
     <ImageView
         android:id="@+id/menuButtonGame2"
-        android:layout_width="77dp"
-        android:layout_height="45dp"
+        android:layout_width="53dp"
+        android:layout_height="44dp"
         android:background="@android:color/white"
         android:onClick="goToMenu"
         app:layout_constraintBottom_toTopOf="@+id/gridView12"
@@ -1100,10 +1100,9 @@
         android:layout_width="255dp"
         android:layout_height="match_parent"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="156dp"
         android:background="#FFFDD0"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuButton"
         tools:visibility="gone">
 

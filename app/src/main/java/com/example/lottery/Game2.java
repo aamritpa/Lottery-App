@@ -341,31 +341,37 @@ public class Game2 extends AppCompatActivity {
         {
             Intent intent = new Intent(getApplicationContext(),Profile.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.TicketsButton || view.getId()==R.id.TicketsIcon)
         {
             Intent intent = new Intent(getApplicationContext(),UserTickets.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.walletButton || view.getId()==R.id.walletIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Wallet.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.helpButton || view.getId()==R.id.helpIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Help.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.winnerButton || view.getId()==R.id.winnerIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Winners.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.aboutButton || view.getId()==R.id.aboutIcon)
         {
             Intent intent = new Intent(getApplicationContext(),About.class);
             startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
         }
     }
 }

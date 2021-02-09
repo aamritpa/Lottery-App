@@ -4,6 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".About">
 
+    <ImageView
+        android:id="@+id/goBack"
+        android:layout_width="84dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:onClick="goBack"
+        android:tint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="388dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:text="BigDraw is a lottery application company whose purpose is to bring happiness to people with big Jackpot prices.  "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="147dp"
+        android:background="#CFCACA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goBack"
+        app:srcCompat="@drawable/bigdraw" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="394dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="4dp"
+        android:text="The lottery Draw4U and Draw4State have weekely draws on Friday and cost atleast 100Rs. The lottery allows users to select numbers for a particular draw and matching all number with the winning numbers will win 25000. "
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="35sp"
+        android:layout_marginTop="16dp"
+        android:background="#CFCACA"
+        android:paddingLeft="10sp"
+        android:text="Rules and Regulations"
+        android:textColor="#3559A3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="371dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:text="The lottery tickets purchased does not always gurrante a winner. The lottery winning depends upon the luck of the player and our team always suggest to play in limits."
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="360dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:text="The current maximum Jackpot for Draw4U and Draw4State is 25000Rs but this can be changed without any constent of the users."
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="367dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:text="Draw4U and Draw4State Tickets purchased are non refundable and no amount of oney will be refunded back to player. "
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,9 +22,9 @@ import java.util.List;
 
 public class UserTickets extends AppCompatActivity {
 
-    private String gameStatus;
-    private String winningAmount;
-    private String drawDate;
+    private String gameStatus="";
+    private String winningAmount="";
+    private String drawDate="";
 
 
     @Override
