@@ -373,5 +373,13 @@ public class Game2 extends AppCompatActivity {
             startActivity(intent);
             menuLayout.setVisibility(View.GONE);
         }
+        else if(view.getId()==R.id.logoutIconDraw4State || view.getId()==R.id.logoutButtonDraw4State)
+        {
+            Intent intent = new Intent(getApplicationContext(),Login.class);
+            startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
+        }
     }
+    @Override
+    public void onBackPressed() { Game2.this.finish();}
 }

@@ -91,7 +91,7 @@ public class Register extends AppCompatActivity {
 
         /* Error Handling */
         if(userName.isEmpty() || userEmail.isEmpty() ||userPassword.isEmpty() ||userConfirmPassword.isEmpty()
-        || userAddress.isEmpty() || userCity.isEmpty() || userCountry.isEmpty() || userAge.isEmpty())
+        || userAddress.isEmpty() || userCity.isEmpty() || userCountry.isEmpty() || userAge.isEmpty() || userLastName.isEmpty() || userPhoneNumber.isEmpty())
         {
             Toast.makeText(this,"Details Cannot Be Empty!",Toast.LENGTH_LONG).show();
         }
@@ -142,6 +142,7 @@ public class Register extends AppCompatActivity {
             Toast.makeText(this,"Internet Connection Failed!",Toast.LENGTH_LONG).show();
         }
 
-
     }
+    @Override
+    public void onBackPressed() { Register.this.finish();}
 }

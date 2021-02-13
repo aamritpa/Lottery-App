@@ -10,10 +10,9 @@
         android:bottom="0dp"
         android:left="3dp"
         android:right="0dp"
-        android:top="0dp">
+        android:top="3dp">
         <shape>
-            <solid android:color="#f2a154" />
+            <solid android:color="#e7e6e1" />
         </shape>
     </item>
-
 </layer-list>

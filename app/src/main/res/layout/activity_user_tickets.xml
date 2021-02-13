@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context=".UserTickets" >
+    android:background="#DAD3D3"
+    tools:context=".UserTickets">
 
     <ScrollView
         android:id="@+id/TicketScrollView"
@@ -28,26 +28,29 @@
 
     <ListView
         android:id="@+id/TicketList"
-        android:layout_width="406dp"
-        android:layout_height="585dp"
+        android:layout_width="match_parent"
+        android:layout_height="710dp"
         android:background="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/buttonsLayout"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
-        app:layout_constraintBottom_toTopOf="@+id/TicketList"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33">
 
         <Button
             android:id="@+id/Draw4UTickets"
             android:layout_width="205dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:onClick="Tickets"
             android:text="Draw4U"
             app:layout_column="0"
@@ -62,4 +65,30 @@
             app:layout_column="1"
             app:layout_row="0" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/border_all"
+        android:gravity="center"
+        android:text="BigDraw Lottery "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:contentDescription="TODO"
+        android:onClick="goBack"
+        android:padding="5sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@android:color/black" />
 </androidx.constraintlayout.widget.ConstraintLayout>

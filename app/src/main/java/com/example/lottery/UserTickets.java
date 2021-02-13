@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -120,5 +121,8 @@ public class UserTickets extends AppCompatActivity {
             e.printStackTrace();
             Toast.makeText(this,"Failed",Toast.LENGTH_LONG).show();
         }
+    }
+    public void goBack(View view){
+        UserTickets.this.finish();
     }
 }

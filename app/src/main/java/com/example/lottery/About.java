@@ -12,8 +12,6 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-
-        ImageView imageView =(ImageView)findViewById(R.id.goBack);
     }
     public void goBack(View view)
     {

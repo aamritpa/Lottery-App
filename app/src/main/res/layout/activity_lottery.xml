@@ -199,11 +199,9 @@
         android:layout_marginBottom="2dp"
         android:onClick="goToMenu"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/menu" />
 
     <androidx.gridlayout.widget.GridLayout
@@ -211,7 +209,7 @@
         android:layout_width="255dp"
         android:layout_height="match_parent"
         android:layout_marginTop="48dp"
-        android:background="#FFFDD0"
+        android:background="@drawable/border_all"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuButton"
@@ -219,8 +217,13 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="169dp"
-            android:layout_height="131dp"
+            android:layout_width="168dp"
+            android:layout_height="130dp"
+            android:background="@drawable/border_top_left"
+            android:filterTouchesWhenObscured="false"
+            android:fitsSystemWindows="false"
+            android:focusableInTouchMode="false"
+            android:padding="5sp"
             app:layout_column="0"
             app:layout_row="0"
             app:srcCompat="@drawable/bigdraw_character" />
@@ -408,16 +411,36 @@
             app:layout_row="7" />
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/logoutButton"
             android:layout_width="170dp"
             android:layout_height="50dp"
+            android:background="@drawable/border_left_bottom"
             android:gravity="center"
+            android:onClick="goToMenu"
             android:padding="10sp"
             android:text="Logout"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="8" />
+
+        <ImageView
+            android:id="@+id/logoutIcon"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_bottom_right"
+            android:onClick="goToMenu"
+            android:padding="8sp"
+            app:srcCompat="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="85dp"
+            android:layout_height="131dp"
+            android:background="@drawable/border_top_right"
+
+            app:layout_column="1"
+            app:layout_row="0" />
 
     </androidx.gridlayout.widget.GridLayout>
 
@@ -427,7 +450,9 @@
         android:layout_height="48dp"
         android:gravity="center"
         android:text="BigDraw Lottery"
+
         android:textColor="@android:color/black"
+
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

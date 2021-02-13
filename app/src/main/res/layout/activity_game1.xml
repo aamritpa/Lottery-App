@@ -1325,6 +1325,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1338,6 +1339,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1351,6 +1353,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1364,6 +1367,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1377,6 +1381,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1390,6 +1395,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1403,6 +1409,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
 
@@ -1461,6 +1468,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1475,6 +1483,7 @@
             android:onClick="addExtra"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -1488,6 +1497,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
     </GridLayout>
@@ -1537,7 +1547,8 @@
             android:gravity="center"
             android:inputType="number"
             android:text="1"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/plus"
@@ -1585,6 +1596,7 @@
         android:layout_width="83dp"
         android:layout_height="42dp"
         android:background="#4CBB17"
+        android:duplicateParentState="false"
         android:onClick="setRandomNumber"
         android:padding="2sp"
         android:text="Random"
@@ -1630,7 +1642,7 @@
         android:layout_width="255dp"
         android:layout_height="match_parent"
         android:layout_marginTop="48dp"
-        android:background="#FFFDD0"
+        android:background="@drawable/border_all"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menuButton"
@@ -1640,6 +1652,8 @@
             android:id="@+id/imageView6"
             android:layout_width="169dp"
             android:layout_height="131dp"
+            android:background="@drawable/border_top_left"
+            android:padding="5sp"
             app:layout_column="0"
             app:layout_row="0"
             app:srcCompat="@drawable/bigdraw_character" />
@@ -1828,16 +1842,27 @@
             app:layout_row="7" />
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/logoutButtonDraw4U"
             android:layout_width="170dp"
             android:layout_height="50dp"
+            android:background="@drawable/border_left_bottom"
             android:gravity="center"
+            android:onClick="goToMenu"
             android:padding="10sp"
             android:text="Logout"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             app:layout_column="0"
             app:layout_row="8" />
+
+        <ImageView
+            android:id="@+id/logoutIconDraw4U"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border_bottom_right"
+            android:onClick="goToMenu"
+            android:padding="8dp"
+            app:srcCompat="@drawable/arrow" />
 
     </androidx.gridlayout.widget.GridLayout>
 

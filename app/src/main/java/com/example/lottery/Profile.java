@@ -53,13 +53,17 @@ public class Profile extends AppCompatActivity {
     }
     public void saveProfile(View view)
     {
-
-        String queryStatement = "UPDATE Registered Set "+
-                "userName="+"\'"+firstName.getText().toString()+"\'" +","
-                +"userLastName="+"\'"+lastName.getText().toString()+"\'"+ ","
-                +"userPhoneNumber="+"\'"+phoneNumber.getText().toString()+"\'"+ ","
-                +"Where userAge=18;";
-
+    //Updating the user information
+        String queryStatement = "UPDATE Registered Set userName= "+
+                "\'"+firstName.getText().toString() +"\'"
+                + " , " +
+                "userLastName= "+
+                "\'"+lastName.getText().toString() +"\'"
+                + " , " +
+                "userPhoneNumber= "+
+                "\'"+phoneNumber.getText().toString() +"\'" +
+                " Where userEmail="+ "\'"+email.getText().toString()+"\';";
+        Toast.makeText(this, queryStatement,Toast.LENGTH_LONG).show();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(queryStatement);
             preparedStatement.executeUpdate();
@@ -73,5 +77,11 @@ public class Profile extends AppCompatActivity {
             Toast.makeText(this,"Update Failed!",Toast.LENGTH_LONG).show();
         }
     }
+    public void goBack(View view)
+    {
+        Profile.this.finish();
+    }
 
+    @Override
+    public void onBackPressed() { Profile.this.finish();}
 }

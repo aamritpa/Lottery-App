@@ -103,13 +103,7 @@ public class Login extends AppCompatActivity {
         {
             Toast.makeText(this,"Server Down Please Try Again Later",Toast.LENGTH_LONG).show();
         }
-
-
-
     }
-
-
-
-
-
+    @Override
+    public void onBackPressed() { }
 }

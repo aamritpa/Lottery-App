@@ -274,5 +274,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
             }
         }
     }
+    @Override
+    public void onBackPressed() { Payment.this.finish();}
 }
 

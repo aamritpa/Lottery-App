@@ -11,4 +11,6 @@ public class Winners extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winners);
     }
+    @Override
+    public void onBackPressed() { Winners.this.finish();}
 }

@@ -109,6 +109,13 @@ public class Lottery extends AppCompatActivity {
             startActivity(intent);
             menuLayout.setVisibility(View.GONE);
         }
+        else if(view.getId()==R.id.logoutButton || view.getId()==R.id.logoutIcon)
+        {
+
+            Intent intent = new Intent(getApplicationContext(),Login.class);
+            startActivity(intent);
+            menuLayout.setVisibility(View.GONE);
+        }
     }
     @Override
     public void onBackPressed() {}

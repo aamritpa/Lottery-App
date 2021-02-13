@@ -4,23 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="#e7e6e1"
     tools:context=".About">
-
-    <ImageView
-        android:id="@+id/goBack"
-        android:layout_width="84dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="2dp"
-        android:background="@android:color/white"
-        android:backgroundTint="@android:color/white"
-        android:onClick="goBack"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable"
-        android:contentDescription="TODO"
-        app:tint="#000000" />
 
     <TextView
         android:id="@+id/textView24"
@@ -40,9 +25,10 @@
         android:id="@+id/imageView7"
         android:layout_width="match_parent"
         android:layout_height="147dp"
-        android:background="#CFCACA"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goBack"
+        app:layout_constraintTop_toBottomOf="@+id/textView37"
         app:srcCompat="@drawable/bigdraw" />
 
     <TextView
@@ -63,8 +49,9 @@
         android:layout_width="match_parent"
         android:layout_height="35sp"
         android:layout_marginTop="16dp"
-        android:background="#CFCACA"
+        android:background="@drawable/border_all"
         android:paddingLeft="10sp"
+        android:paddingTop="5sp"
         android:text="Rules and Regulations"
         android:textColor="#3559A3"
         android:textSize="18sp"
@@ -105,4 +92,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/border_all"
+        android:gravity="center"
+        android:text="BigDraw Lottery"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="59dp"
+        android:layout_height="48dp"
+        android:onClick="goBack"
+        android:padding="5sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@android:color/black" />
 </androidx.constraintlayout.widget.ConstraintLayout>
