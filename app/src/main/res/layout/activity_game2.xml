@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game2layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CDC9C9"
+    android:onClick="goToMenu"
     tools:context=".Game2">
 
 
@@ -29,6 +31,7 @@
                 android:layout_height="613dp"
                 android:background="#555975"
                 android:gravity="center"
+                android:onClick="goToMenu"
                 android:orientation="horizontal"
                 android:padding="10sp">
 
@@ -42,6 +45,7 @@
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
                     android:foregroundGravity="center"
+                    android:onClick="goToMenu"
                     android:padding="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -200,6 +204,7 @@
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
                     android:foregroundGravity="center"
+                    android:onClick="goToMenu"
                     android:padding="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/gridView2"
                     app:layout_constraintStart_toEndOf="@+id/gridView2"
@@ -356,6 +361,7 @@
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
                     android:foregroundGravity="center"
+                    android:onClick="goToMenu"
                     android:padding="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/gridView3"
                     app:layout_constraintStart_toEndOf="@+id/gridView3"
@@ -512,6 +518,7 @@
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
                     android:foregroundGravity="center"
+                    android:onClick="goToMenu"
                     android:padding="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/gridView4"
                     app:layout_constraintStart_toEndOf="@+id/gridView4"
@@ -668,6 +675,7 @@
                     android:layout_marginTop="20dp"
                     android:background="#B0D5C7"
                     android:foregroundGravity="center"
+                    android:onClick="goToMenu"
                     android:padding="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/gridView5"
                     app:layout_constraintStart_toEndOf="@+id/gridView5"
@@ -846,6 +854,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -859,6 +868,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -872,6 +882,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -885,6 +896,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -898,6 +910,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -911,6 +924,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -924,6 +938,7 @@
             android:inputType="number"
             android:padding="10sp"
             android:text=""
+            android:textColor="@android:color/white"
             android:textSize="20sp" />
 
 
@@ -998,7 +1013,8 @@
             android:gravity="center"
             android:inputType="number"
             android:text="1"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/plus"

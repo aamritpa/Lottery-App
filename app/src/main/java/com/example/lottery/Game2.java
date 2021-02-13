@@ -340,6 +340,7 @@ public class Game2 extends AppCompatActivity {
         else if(view.getId()==R.id.myProfileButton || view.getId()==R.id.myProfileIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Profile.class);
+            random.setVisibility(View.VISIBLE);
             startActivity(intent);
             menuLayout.setVisibility(View.GONE);
         }
@@ -347,37 +348,48 @@ public class Game2 extends AppCompatActivity {
         {
             Intent intent = new Intent(getApplicationContext(),UserTickets.class);
             startActivity(intent);
+            random.setVisibility(View.VISIBLE);
             menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.walletButton || view.getId()==R.id.walletIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Wallet.class);
             startActivity(intent);
+            random.setVisibility(View.VISIBLE);
             menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.helpButton || view.getId()==R.id.helpIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Help.class);
             startActivity(intent);
+            random.setVisibility(View.VISIBLE);
             menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.winnerButton || view.getId()==R.id.winnerIcon)
         {
             Intent intent = new Intent(getApplicationContext(),Winners.class);
             startActivity(intent);
+            random.setVisibility(View.VISIBLE);
             menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.aboutButton || view.getId()==R.id.aboutIcon)
         {
             Intent intent = new Intent(getApplicationContext(),About.class);
             startActivity(intent);
+            random.setVisibility(View.VISIBLE);
             menuLayout.setVisibility(View.GONE);
         }
         else if(view.getId()==R.id.logoutIconDraw4State || view.getId()==R.id.logoutButtonDraw4State)
         {
             Intent intent = new Intent(getApplicationContext(),Login.class);
             startActivity(intent);
+            random.setVisibility(View.VISIBLE);
             menuLayout.setVisibility(View.GONE);
+        }
+        else
+        {
+            menuLayout.setVisibility(View.GONE);
+            random.setVisibility(View.VISIBLE);
         }
     }
     @Override
