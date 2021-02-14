@@ -26,6 +26,8 @@ public class UserTickets extends AppCompatActivity {
     private String gameStatus="";
     private String winningAmount="";
     private String drawDate="";
+    private String gameType="";
+    private String purchasedDate="";
 
 
     @Override
@@ -44,17 +46,20 @@ public class UserTickets extends AppCompatActivity {
         //This SQL Statement is not efficient. For large number of users we will change it to better efficient algorithm.
         try {
             statement = Login.connection.createStatement();
-            String gameType="";
+            String gameName="";
+
             if(view.getId()==R.id.Draw4UTickets)
             {
-                gameType= " Game1 ";
+                gameName= " Game1 ";
+                gameType= "Draw4U Lottery";
             }
             else if(view.getId()==R.id.Draw4StateTickets)
             {
-                gameType= " Game2 ";
+                gameName= " Game2 ";
+                gameType= "Draw4State Lottery";
             }
 
-            ResultSet resultSet = statement.executeQuery("Select * From "+ gameType +"Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
+            ResultSet resultSet = statement.executeQuery("Select * From "+ gameName +"Where email="+"\'"+Login.userEmail.toString()+"\'"+";");
             if(resultSet!=null)
             {
                 while (resultSet.next()) {
@@ -72,7 +77,11 @@ public class UserTickets extends AppCompatActivity {
                         else if(i==22)
                         {
                             numberInString=numberInString+"\n\n";
-                            numberInString=numberInString+" Extras "+"\n";
+                            numberInString=numberInString+" Extras "+"\n\n";
+                        }
+                        else if(i==27)
+                        {
+                            purchasedDate=resultSet.getString(i);
                         }
                         else if(i==28){
                             gameStatus=resultSet.getString(i);
@@ -107,10 +116,11 @@ public class UserTickets extends AppCompatActivity {
                     String value=adapter.getItem(position);
                     Intent userTicketStatus = new Intent(getApplicationContext(),UserTicketsStatus.class);
                     userTicketStatus.putExtra("numbers",value.toString());  //Sending email to next activity
-                    userTicketStatus.putExtra("gameType","Draw4U");
+                    userTicketStatus.putExtra("gameType",gameType.toString());
                     userTicketStatus.putExtra("gameStatus",gameStatus.toString());
                     userTicketStatus.putExtra("winningAmount",winningAmount.toString());
                     userTicketStatus.putExtra("drawDate",drawDate.toString());
+                    userTicketStatus.putExtra("purchasedDate",purchasedDate.toString());
                     startActivity(userTicketStatus);
 
                 }

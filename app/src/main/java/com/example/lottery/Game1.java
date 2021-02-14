@@ -50,6 +50,8 @@ public class Game1 extends AppCompatActivity {
     }
 
     public void chooseNumber(View view){
+
+        hideMenu(view);// hide the menu mar
         TextView selectedText =(TextView) findViewById(view.getId());
         alreadyExists=false;
         number1=(TextView) findViewById(R.id.selectedNumber1);
@@ -192,9 +194,18 @@ public class Game1 extends AppCompatActivity {
         }
     }
 
+    public void hideMenu(View view)
+    {
+        /* Using the below code to hide the menu bar when someone opens it and then click on the number without closing it */
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbarGame1);
+        Button random= (Button) findViewById(R.id.game1random);
+        menuLayout.setVisibility(View.GONE);
+        random.setVisibility(View.VISIBLE);
+    }
 
     public void addExtra(View view)
     {
+        hideMenu(view); //hide the menu bar
         TextView selectedText =(TextView) findViewById(view.getId());
         extraExists=false;
         number1=(TextView) findViewById(R.id.selectedNumber1);
@@ -274,6 +285,7 @@ public class Game1 extends AppCompatActivity {
     }
     public void plusMinusDraw(View view)
     {
+        hideMenu(view); //hide the menu bar
         TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
         if (getResources().getResourceEntryName(view.getId()).equals("minus"))
         {
@@ -317,6 +329,7 @@ public class Game1 extends AppCompatActivity {
 
     public void setRandomNumber(View view)
     {
+        hideMenu(view); //hide the menu bar
         countSelected=7;
         extraCount=3;
         number1=(TextView) findViewById(R.id.selectedNumber1);
@@ -400,7 +413,8 @@ public class Game1 extends AppCompatActivity {
         }
     }
     public void onConfirm(View view){
-        if((countSelected==7 && extraCount==0) || (countSelected==7 && extraCount==3) )
+        hideMenu(view); //hide the menu bar
+        if((countSelected==7 && extraCount==3) )
         {
             TextView amount= (TextView) findViewById(R.id.amount);
             TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
@@ -500,6 +514,10 @@ public class Game1 extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(),Login.class);
             startActivity(intent);
             menuLayout.setVisibility(View.GONE);
+        }
+        else
+        {
+            hideMenu(view); //hide the menu bar
         }
     }
     @Override

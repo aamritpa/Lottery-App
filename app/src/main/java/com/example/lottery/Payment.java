@@ -85,6 +85,19 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
 
         gameType=intent.getStringExtra("gameType");
 
+        /*
+        Setting up the Header for the Game either Game4U or Game4State
+        */
+        TextView setText= (TextView)findViewById(R.id.gameID);
+        if(gameType.toString().equals("0"))
+        {
+            setText.setText("Game4U Lottery");
+        }
+        else
+        {
+            setText.setText("Game4State Lottery");
+        }
+
         /* Filling the second row of numbers */
         ArrayList arrayListNumbers= new ArrayList(7);
         Random random= new Random();
@@ -206,7 +219,7 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                     "','"+extra1.getText().toString() + "','"+extra2.getText().toString()+"','"+ extra3.getText().toString()
                     +"','"+ String.valueOf(totalDraws)
                     +"','"+ datePurchased
-                    +"','"+ "0"
+                    +"','"+ gameType.toString()
                     +"','"+ drawDate
                     +"','"+ "0"
                     + "')";
@@ -273,6 +286,10 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
                 Log.e(TAG, "Error in starting Razorpay Checkout", e);
             }
         }
+    }
+    public void goBack(View view)
+    {
+        Payment.this.finish();
     }
     @Override
     public void onBackPressed() { Payment.this.finish();}

@@ -38,9 +38,18 @@ public class Game2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2);
     }
-
+    public void hideMenu(View view)
+    {
+        /* Using the below code to hide the menu bar when someone opens it and then click on the number without closing it */
+        GridLayout menuLayout= (GridLayout) findViewById(R.id.menuToolbarGame2);
+        Button random= (Button) findViewById(R.id.game2random);
+        menuLayout.setVisibility(View.GONE);
+        random.setVisibility(View.VISIBLE);
+    }
     public void choosegame2Number(View view)
     {
+        hideMenu(view); //hide menu bar
+
         TextView selectedText =(TextView) findViewById(view.getId());
         alreadyExists=false;
         number1=(TextView) findViewById(R.id.selectedNumber1);
@@ -184,6 +193,7 @@ public class Game2 extends AppCompatActivity {
     }
     public void plusMinusDraw(View view)
     {
+        hideMenu(view); //hide menu bar
         TextView totalDraws= (TextView) findViewById(R.id.totalDraws);
         if (getResources().getResourceEntryName(view.getId()).equals("minus"))
         {
@@ -226,6 +236,7 @@ public class Game2 extends AppCompatActivity {
 
     public void setRandomNumberGame2(View view)
     {
+        hideMenu(view); //hide menu bar
         countSelected=7;
         number1=(TextView) findViewById(R.id.selectedNumber1);
         number2=(TextView) findViewById(R.id.selectedNumber2);
@@ -272,6 +283,7 @@ public class Game2 extends AppCompatActivity {
 
     }
     public void onConfirmGame2(View view){
+        hideMenu(view); //hide menu bar
         if(countSelected==7)
         {
             //Random number generator for Extras

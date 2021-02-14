@@ -11,13 +11,12 @@
         android:id="@+id/gridLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:background="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094">
+        app:layout_constraintTop_toBottomOf="@+id/textView39">
 
         <TextView
             android:id="@+id/textView8"
@@ -116,6 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@android:color/white"
+        android:onClick="passwordChange"
         android:text="Change your password"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,7 +123,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saveProfile"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
         android:id="@+id/saveProfile"
@@ -133,6 +133,7 @@
         android:background="#4CBB17"
         android:onClick="saveProfile"
         android:text="SAVE"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout5" />
@@ -141,11 +142,12 @@
         android:id="@+id/textView39"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:background="@drawable/border_bottom"
+        android:background="@android:color/black"
         android:gravity="center"
         android:text="BigDraw Lottery"
-        android:textColor="@android:color/black"
+        android:textColor="#f2a154"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -161,6 +163,105 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc_vector_test"
-        app:tint="@android:color/black" />
+        app:tint="@android:color/white" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="Current Password"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="New Password"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="Confirm Password"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/oldPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textColor="@android:color/black"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/newPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textColor="@android:color/black"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <EditText
+            android:id="@+id/confirmNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textColor="@android:color/black"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/confirmNewPasswordButton"
+        android:layout_width="114dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="3dp"
+        android:background="#4CBB17"
+        android:onClick="confirmPasswordChange"
+        android:padding="10sp"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+        tools:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

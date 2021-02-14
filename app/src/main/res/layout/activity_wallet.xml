@@ -14,7 +14,7 @@
         android:layout_marginTop="2dp"
         android:text="₹0"
         android:textColor="@android:color/black"
-        android:textSize="60sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10" />
@@ -24,9 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="#f2a154"
+        android:background="@android:color/white"
         android:text="Transfer To Bank Account"
-        android:textColor="@android:color/black"
+        android:textColor="#256B85"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -53,13 +54,13 @@
     <TextView
         android:id="@+id/textView34"
         android:layout_width="match_parent"
-        android:layout_height="71dp"
-        android:background="@drawable/border_all"
+        android:layout_height="51dp"
+        android:background="@android:color/black"
         android:gravity="center"
         android:padding="10sp"
         android:text="WALLET"
-        android:textColor="@android:color/black"
-        android:textSize="25sp"
+        android:textColor="#f2a154"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +68,8 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="70dp"
-        android:layout_height="71dp"
+        android:layout_width="60dp"
+        android:layout_height="52dp"
         android:contentDescription="TODO"
         android:onClick="goBack"
         android:padding="10sp"
@@ -76,6 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc_vector_test"
-        app:tint="@android:color/black" />
+        app:tint="@android:color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

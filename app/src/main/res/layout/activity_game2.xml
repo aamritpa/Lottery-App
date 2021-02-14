@@ -29,7 +29,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="613dp"
-                android:background="#555975"
+                android:background="#256B85"
                 android:gravity="center"
                 android:onClick="goToMenu"
                 android:orientation="horizontal"
@@ -43,7 +43,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="20dp"
-                    android:background="#B0D5C7"
+                    android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:onClick="goToMenu"
                     android:padding="8dp"
@@ -202,7 +202,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
-                    android:background="#B0D5C7"
+                    android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:onClick="goToMenu"
                     android:padding="8dp"
@@ -359,7 +359,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
-                    android:background="#B0D5C7"
+                    android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:onClick="goToMenu"
                     android:padding="8dp"
@@ -516,7 +516,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
-                    android:background="#B0D5C7"
+                    android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:onClick="goToMenu"
                     android:padding="8dp"
@@ -673,7 +673,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
                     android:layout_marginTop="20dp"
-                    android:background="#B0D5C7"
+                    android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:onClick="goToMenu"
                     android:padding="8dp"
@@ -948,12 +948,13 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         android:foregroundGravity="bottom"
         android:gravity="center"
-        android:text="Draw4State"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:text="Draw4State Lottery"
+        android:textColor="#f2a154"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -1002,7 +1003,8 @@
             android:layout_marginStart="4dp"
             android:layout_marginLeft="4dp"
             android:onClick="plusMinusDraw"
-            android:text="-" />
+            android:text="-"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/totalDraws"
@@ -1023,8 +1025,8 @@
             android:layout_row="0"
             android:layout_column="3"
             android:onClick="plusMinusDraw"
-            android:padding="2sp"
-            android:text="+" />
+            android:text="+"
+            android:textSize="20sp" />
 
 
         <TextView
@@ -1090,8 +1092,8 @@
         android:id="@+id/menuButtonGame2"
         android:layout_width="53dp"
         android:layout_height="44dp"
-        android:background="@android:color/white"
         android:onClick="goToMenu"
+        android:tint="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/gridView12"
         app:layout_constraintEnd_toStartOf="@+id/textView7"
         app:layout_constraintHorizontal_bias="0.0"
@@ -1099,17 +1101,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.148"
         app:srcCompat="@drawable/menu" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="71dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bigdraw_character" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/menuToolbarGame2"

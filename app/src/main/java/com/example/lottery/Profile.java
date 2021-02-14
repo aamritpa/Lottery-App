@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,7 +66,6 @@ public class Profile extends AppCompatActivity {
                 "userPhoneNumber= "+
                 "\'"+phoneNumber.getText().toString() +"\'" +
                 " Where userEmail="+ "\'"+email.getText().toString()+"\';";
-        Toast.makeText(this, queryStatement,Toast.LENGTH_LONG).show();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(queryStatement);
             preparedStatement.executeUpdate();
@@ -84,4 +86,59 @@ public class Profile extends AppCompatActivity {
 
     @Override
     public void onBackPressed() { Profile.this.finish();}
+
+
+    public void passwordChange(View view)
+    {
+        androidx.gridlayout.widget.GridLayout gridLayout = (androidx.gridlayout.widget.GridLayout)findViewById(R.id.passwordLayout);
+        gridLayout.setVisibility(View.VISIBLE);
+        Button button =(Button)findViewById(R.id.confirmNewPasswordButton);
+        button.setVisibility(View.VISIBLE);
+    }
+    public void confirmPasswordChange(View view)
+    {
+        EditText oldPassword =(EditText)findViewById(R.id.oldPassword);
+        EditText newPassword =(EditText)findViewById(R.id.newPassword);
+        EditText newConfirmPassword =(EditText)findViewById(R.id.confirmNewPassword);
+
+        String realPassword = Login.userPassword;
+        if(oldPassword.getText().toString().equals("") || newPassword.getText().toString().equals("") || newConfirmPassword.getText().toString().equals(""))
+        {
+            Toast.makeText(this,"Enter Complete Details",Toast.LENGTH_LONG).show();
+        }
+        else if(!oldPassword.getText().toString().equals(realPassword))
+        {
+            Toast.makeText(this,"Current Password Is Wrong",Toast.LENGTH_LONG).show();
+        }
+        else if(!newPassword.getText().toString().equals(newConfirmPassword.getText().toString()))
+        {
+            Toast.makeText(this,"Confirm Password Does Not Match",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            //Updating the user information
+            String queryStatement = "UPDATE Registered Set userPassword= "+
+                    "\'"+newPassword.getText().toString() +"\'" +
+                    " Where userEmail="+ "\'"+email.getText().toString()+"\';";
+
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(queryStatement);
+                preparedStatement.executeUpdate();
+                //Log.i("Statement",String.valueOf(preparedStatement.executeUpdate()));
+                preparedStatement.close();
+                Toast.makeText(this,"Password Updated Successfully!",Toast.LENGTH_LONG).show();
+
+                oldPassword.setText("");
+                newPassword.setText("");
+                newConfirmPassword.setText("");
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+                Toast.makeText(this,"Update Failed!",Toast.LENGTH_LONG).show();
+            }
+        }
+
+
+    }
 }
