@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".UserTicketsStatus"></activity>
+        <activity android:name=".ResetPassword"></activity>
+        <activity android:name=".UserTicketsStatus" />
         <activity android:name=".Game2" />
         <activity android:name=".About" />
         <activity android:name=".Winners" />

@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -145,4 +147,76 @@ public class Register extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() { Register.this.finish();}
+
+    public void goToNext(View view)
+    {
+        TextView firstName = (TextView) findViewById(R.id.userName);
+        TextView lastName = (TextView) findViewById(R.id.lastNameProfile);
+        TextView email = (TextView) findViewById(R.id.userEmail);
+        TextView password = (TextView) findViewById(R.id.userPassword);
+        TextView confirmPassword = (TextView) findViewById(R.id.userConfirmPassword);
+
+        TextView firstNameText = (TextView) findViewById(R.id.nameText);
+        TextView lastNameText = (TextView) findViewById(R.id.lastnameText);
+        TextView emailText = (TextView) findViewById(R.id.emailText);
+        TextView passwordText = (TextView) findViewById(R.id.passwordText);
+        TextView confirmPasswordText = (TextView) findViewById(R.id.confirmPasswordText);
+
+        ImageView nextImage = (ImageView) findViewById(R.id.next);
+
+
+        if(firstName.getText().toString().equals("") || lastName.getText().toString().equals("")
+                || email.getText().toString().equals("") || password.getText().toString().equals("") || confirmPassword.getText().toString().equals(""))
+        {
+            Toast.makeText(this,"Enter Complete Details",Toast.LENGTH_LONG).show();
+        }
+        else if(!confirmPassword.getText().toString().equals(password.getText().toString()))
+        {
+            Toast.makeText(this,"Password does not match!",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            //Views that need to be invisible
+            firstName.setVisibility(View.GONE);
+            lastName.setVisibility(View.GONE);
+            email.setVisibility(View.GONE);
+            password.setVisibility(View.GONE);
+            confirmPassword.setVisibility(View.GONE);
+            firstNameText.setVisibility(View.GONE);
+            lastNameText.setVisibility(View.GONE);
+            emailText.setVisibility(View.GONE);
+            passwordText.setVisibility(View.GONE);
+            confirmPasswordText.setVisibility(View.GONE);
+            nextImage.setVisibility(View.GONE);
+
+            //Views that need to be Visible
+            Button buttonRegister = (Button)findViewById(R.id.buttonRegister);
+            TextView phoneNumberText = (TextView) findViewById(R.id.phoneNumberText);
+            TextView addressText = (TextView) findViewById(R.id.addressText);
+            TextView cityText = (TextView) findViewById(R.id.cityText);
+            TextView countryText = (TextView) findViewById(R.id.countryText);
+            TextView ageText = (TextView) findViewById(R.id.ageText);
+            buttonRegister.setVisibility(View.VISIBLE);
+            phoneNumberText.setVisibility(View.VISIBLE);
+            addressText.setVisibility(View.VISIBLE);
+            cityText.setVisibility(View.VISIBLE);
+            countryText.setVisibility(View.VISIBLE);
+            ageText.setVisibility(View.VISIBLE);
+
+            TextView userPhoneNumber = (TextView) findViewById(R.id.userPhoneNumber);
+            TextView userAddress = (TextView) findViewById(R.id.userAddress);
+            TextView userCity = (TextView) findViewById(R.id.userCity);
+            TextView userCountry = (TextView) findViewById(R.id.userCountry);
+            TextView userAge = (TextView) findViewById(R.id.userAge);
+            userPhoneNumber.setVisibility(View.VISIBLE);
+            userAddress.setVisibility(View.VISIBLE);
+            userCity.setVisibility(View.VISIBLE);
+            userCountry.setVisibility(View.VISIBLE);
+            userAge.setVisibility(View.VISIBLE);
+        }
+    }
+    public void goBack(View view)
+    {
+        Register.this.finish();
+    }
 }

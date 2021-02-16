@@ -107,4 +107,10 @@ public class Login extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() { }
+
+    public void resetPassword(View view)
+    {
+        Intent intent= new Intent(getApplicationContext(),ResetPassword.class);
+        startActivity(intent);
+    }
 }
