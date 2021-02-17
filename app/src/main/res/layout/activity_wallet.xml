@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@android:color/white"
+        android:clickable="false"
         android:text="Transfer To Bank Account"
         android:textColor="#256B85"
         android:textStyle="bold"
@@ -35,11 +36,11 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="10dp"
         android:background="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -78,5 +79,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc_vector_test"
         app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="* Transfer to back account current not available. Contact customer care to claim the amount."
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

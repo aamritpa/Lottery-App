@@ -44,7 +44,7 @@ public class ResetPassword extends AppCompatActivity {
         final TextView timeLeft =(TextView)findViewById(R.id.ResetPasswordTimer);
         Connection connection= Login.connection;
         String userName="";
-        if(connection!=null) {
+        if(connection!=null && !enteredEmail.getText().toString().equals("")) {
             Statement statement = null;
             //This SQL Statement is not efficient. For large number of users we will change it to better efficient algorithm.
             try {
@@ -153,7 +153,15 @@ public class ResetPassword extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this,"The application is currently down for maintenance. Please Come Back Later ",Toast.LENGTH_LONG).show();
+            if(enteredEmail.getText().toString().equals(""))
+            {
+                Toast.makeText(this,"Email Cannot be empty",Toast.LENGTH_LONG).show();
+
+            }
+            else
+            {
+                Toast.makeText(this,"The application is currently down for maintenance. Please Come Back Later ",Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

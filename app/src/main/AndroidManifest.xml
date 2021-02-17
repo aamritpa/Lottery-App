@@ -10,10 +10,16 @@
         android:allowBackup="true"
         android:icon="@drawable/bigdraw_character"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/bigdraw_character"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ResetPassword"></activity>
+        <activity android:name=".Start">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResetPassword" />
         <activity android:name=".UserTicketsStatus" />
         <activity android:name=".Game2" />
         <activity android:name=".About" />
@@ -25,13 +31,7 @@
         <activity android:name=".Payment" />
         <activity android:name=".Game1" />
         <activity android:name=".Lottery" />
-        <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Login"></activity>
         <activity android:name=".Register" />
     </application>
 

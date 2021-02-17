@@ -41,6 +41,7 @@ public class Register extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
         try {
             Class.forName(Classes);
+            DriverManager.setLoginTimeout(10);
             connection= DriverManager.getConnection(url,username,password);
 
         } catch (ClassNotFoundException | SQLException e) {
