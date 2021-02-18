@@ -25,7 +25,6 @@
         android:id="@+id/numbers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="#e7e6e1"
         android:gravity="bottom"
         android:paddingLeft="3sp"
@@ -40,8 +39,8 @@
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="10dp"
         android:background="#e7e6e1"
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,7 +11,7 @@
 
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollViewlotteryPage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="280dp"
@@ -196,7 +196,7 @@
                 </GridLayout>
 
                 <GridLayout
-                    android:id="@+id/gridView2"
+                    android:id="@+id/numbersGridLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
@@ -204,9 +204,9 @@
                     android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:padding="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/gridView2"
-                    app:layout_constraintStart_toEndOf="@+id/gridView2"
-                    app:layout_constraintTop_toTopOf="@+id/gridView2"
+                    app:layout_constraintBottom_toBottomOf="@+id/numbersGridLayout"
+                    app:layout_constraintStart_toEndOf="@+id/numbersGridLayout"
+                    app:layout_constraintTop_toTopOf="@+id/numbersGridLayout"
                     app:layout_constraintVertical_bias="0.0">
 
                     <TextView
@@ -930,9 +930,9 @@
                     android:background="#C0C0C0"
                     android:foregroundGravity="center"
                     android:padding="5dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/gridView2"
-                    app:layout_constraintStart_toEndOf="@+id/gridView2"
-                    app:layout_constraintTop_toTopOf="@+id/gridView2"
+                    app:layout_constraintBottom_toBottomOf="@+id/numbersGridLayout"
+                    app:layout_constraintStart_toEndOf="@+id/numbersGridLayout"
+                    app:layout_constraintTop_toTopOf="@+id/numbersGridLayout"
                     app:layout_constraintVertical_bias="0.0">
 
                     <TextView
@@ -1311,7 +1311,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -1427,7 +1427,7 @@
         android:text="@string/extras"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
@@ -1455,7 +1455,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
@@ -1511,7 +1511,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:background="#C0C0C0"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="parent"
@@ -1595,7 +1595,7 @@
         android:onClick="onConfirm"
         android:padding="2sp"
         android:text="Confirm"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
@@ -1623,7 +1623,7 @@
         android:text="* Two Lines will be selected randomly"
         android:textColor="@android:color/black"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toStartOf="@+id/game1random"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/game1random" />

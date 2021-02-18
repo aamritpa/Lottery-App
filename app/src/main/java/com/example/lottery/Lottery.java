@@ -5,18 +5,37 @@ import androidx.gridlayout.widget.GridLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.example.lottery.Login.connection;
+
 public class Lottery extends AppCompatActivity {
 
     String userEmail;
+    TextView lotteryDate;
+    TextView numberText1;
+    TextView numberText2;
+    TextView numberText3;
+    TextView numberText4;
+    TextView numberText5;
+    TextView numberText6;
+    TextView numberText7;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -25,6 +44,37 @@ public class Lottery extends AppCompatActivity {
 
         Intent intent = getIntent();
         userEmail= intent.getStringExtra("email");
+        lotteryDate= (TextView)findViewById(R.id.lotteryDate);
+        numberText1= (TextView)findViewById(R.id.numbertext1);
+        numberText2= (TextView)findViewById(R.id.numbertext2);
+        numberText3= (TextView)findViewById(R.id.numbertext3);
+        numberText4= (TextView)findViewById(R.id.numbertext4);
+        numberText5= (TextView)findViewById(R.id.numbertext5);
+        numberText6= (TextView)findViewById(R.id.numbertext6);
+        numberText7= (TextView)findViewById(R.id.numbertext7);
+
+        Statement statement=null;
+        try {
+            statement= connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("Select * From Draw4UwinningNumbers Order By winningDate DESC;");
+            while(resultSet.next())
+            {
+                numberText1.setText(resultSet.getString(1));
+                numberText2.setText(resultSet.getString(2));
+                numberText3.setText(resultSet.getString(3));
+                numberText4.setText(resultSet.getString(4));
+                numberText5.setText(resultSet.getString(5));
+                numberText6.setText(resultSet.getString(6));
+                numberText7.setText(resultSet.getString(7));
+                lotteryDate.setText(resultSet.getString(9));
+                break;
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
     }
     public void goToGame(View view)
     {
@@ -116,7 +166,21 @@ public class Lottery extends AppCompatActivity {
             startActivity(intent);
             menuLayout.setVisibility(View.GONE);
         }
+        else if(view.getId()==R.id.scrollViewlotteryPage || view.getId()==R.id.lotteryTypeText || view.getId()==R.id.lotteryDate)
+        {
+            menuLayout.setVisibility(View.GONE);
+        }
     }
     @Override
     public void onBackPressed() {}
+
+
+    public void showDraw4U()
+    {
+    }
+
+    public void showDraw4State()
+    {
+
+    }
 }

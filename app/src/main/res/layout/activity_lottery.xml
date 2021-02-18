@@ -8,11 +8,12 @@
     tools:context=".Lottery">
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollViewlotteryPage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:background="#e7e6e1"
+        android:onClick="goToMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,30 +28,33 @@
 
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/lotteryTypeText"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:gravity="center"
+                android:onClick="goToMenu"
                 android:text="Draw4U Winning Numbers"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/lotteryDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#e7e6e1"
                 android:gravity="center"
+                android:onClick="goToMenu"
                 android:text="12 Feburary 2020"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <GridLayout
-                android:id="@+id/gridView2"
+                android:id="@+id/numbersGridLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#e7e6e1"
+                android:onClick="goToMenu"
                 android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +64,7 @@
                 app:layout_constraintVertical_bias="0.039">
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/numbertext1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -74,7 +78,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/numbertext2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -86,7 +90,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/numbertext3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -98,7 +102,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/numbertext4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -110,7 +114,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/numbertext5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -122,7 +126,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/numbertext6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -134,7 +138,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/numbertext7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="0"
@@ -448,7 +452,7 @@
         android:layout_height="44dp"
         android:contentDescription="menuButton"
         android:onClick="goToMenu"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/menu"

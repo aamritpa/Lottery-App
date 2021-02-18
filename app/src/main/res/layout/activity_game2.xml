@@ -197,7 +197,7 @@
                 </GridLayout>
 
                 <GridLayout
-                    android:id="@+id/gridView2"
+                    android:id="@+id/numbersGridLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
@@ -206,9 +206,9 @@
                     android:foregroundGravity="center"
                     android:onClick="goToMenu"
                     android:padding="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/gridView2"
-                    app:layout_constraintStart_toEndOf="@+id/gridView2"
-                    app:layout_constraintTop_toTopOf="@+id/gridView2"
+                    app:layout_constraintBottom_toBottomOf="@+id/numbersGridLayout"
+                    app:layout_constraintStart_toEndOf="@+id/numbersGridLayout"
+                    app:layout_constraintTop_toTopOf="@+id/numbersGridLayout"
                     app:layout_constraintVertical_bias="0.0">
 
                     <TextView
@@ -965,7 +965,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewlotteryPage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent" />

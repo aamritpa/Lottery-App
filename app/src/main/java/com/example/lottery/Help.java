@@ -3,6 +3,7 @@ package com.example.lottery;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class Help extends AppCompatActivity {
 
@@ -13,4 +14,6 @@ public class Help extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() { Help.this.finish();}
+    public void goBack(View view) { Help.this.finish();}
+
 }
