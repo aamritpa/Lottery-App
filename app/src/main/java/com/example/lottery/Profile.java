@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +25,7 @@ public class Profile extends AppCompatActivity {
     TextView lastName;
     TextView email;
     TextView phoneNumber;
-
+    TextView errorStatusProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class Profile extends AppCompatActivity {
         lastName=(TextView)findViewById(R.id.lastNameProfile);
         email = (TextView)findViewById(R.id.emailAddressProfile);
         phoneNumber = (TextView)findViewById(R.id.phoneNumberProfile);
-
+        errorStatusProfile= (TextView)findViewById(R.id.errorStatusProfile);
 
         Statement statement =null;
         try {
@@ -51,12 +52,13 @@ public class Profile extends AppCompatActivity {
             }
         } catch (Exception e) {
             e.fillInStackTrace();
-            Toast.makeText(this,"Failed To Get Information! Please Try Again Later.", Toast.LENGTH_LONG).show();
+            errorStatusProfile.setText("* Failed to get account information, please try again later.");
         }
     }
     public void saveProfile(View view)
     {
     //Updating the user information
+        errorStatusProfile= (TextView)findViewById(R.id.errorStatusProfile);
         String queryStatement = "UPDATE Registered Set userName= "+
                 "\'"+firstName.getText().toString() +"\'"
                 + " , " +
@@ -71,12 +73,12 @@ public class Profile extends AppCompatActivity {
             preparedStatement.executeUpdate();
             //Log.i("Statement",String.valueOf(preparedStatement.executeUpdate()));
             preparedStatement.close();
-            Toast.makeText(this,"Updated Successfully!",Toast.LENGTH_LONG).show();
+            errorStatusProfile.setText("* Account information updated successful");
         }
         catch (Exception e)
         {
+            errorStatusProfile.setText("* Account information update failed, try again later.");
             e.printStackTrace();
-            Toast.makeText(this,"Update Failed!",Toast.LENGTH_LONG).show();
         }
     }
     public void goBack(View view)
@@ -100,19 +102,20 @@ public class Profile extends AppCompatActivity {
         EditText oldPassword =(EditText)findViewById(R.id.oldPassword);
         EditText newPassword =(EditText)findViewById(R.id.newPassword);
         EditText newConfirmPassword =(EditText)findViewById(R.id.confirmNewPassword);
+        TextView errorStatusPasswordProfile =(TextView)findViewById(R.id.errorStatusPasswordProfile);
 
         String realPassword = Login.userPassword;
         if(oldPassword.getText().toString().equals("") || newPassword.getText().toString().equals("") || newConfirmPassword.getText().toString().equals(""))
         {
-            Toast.makeText(this,"Enter Complete Details",Toast.LENGTH_LONG).show();
+            errorStatusPasswordProfile.setText("* Enter all fields");
         }
         else if(!oldPassword.getText().toString().equals(realPassword))
         {
-            Toast.makeText(this,"Current Password Is Wrong",Toast.LENGTH_LONG).show();
+            errorStatusPasswordProfile.setText("* Current password is wrong, try again.");
         }
         else if(!newPassword.getText().toString().equals(newConfirmPassword.getText().toString()))
         {
-            Toast.makeText(this,"Confirm Password Does Not Match",Toast.LENGTH_LONG).show();
+            errorStatusPasswordProfile.setText("* Confirm password does not match, try again.");
         }
         else
         {
@@ -126,8 +129,7 @@ public class Profile extends AppCompatActivity {
                 preparedStatement.executeUpdate();
                 //Log.i("Statement",String.valueOf(preparedStatement.executeUpdate()));
                 preparedStatement.close();
-                Toast.makeText(this,"Password Updated Successfully!",Toast.LENGTH_LONG).show();
-
+                errorStatusPasswordProfile.setText("* Password Updated Successfully!");
                 oldPassword.setText("");
                 newPassword.setText("");
                 newConfirmPassword.setText("");
@@ -135,7 +137,7 @@ public class Profile extends AppCompatActivity {
             catch (Exception e)
             {
                 e.printStackTrace();
-                Toast.makeText(this,"Update Failed!",Toast.LENGTH_LONG).show();
+                errorStatusPasswordProfile.setText("* Password update failed, try again later.");
             }
         }
 

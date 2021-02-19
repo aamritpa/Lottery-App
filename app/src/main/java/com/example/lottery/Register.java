@@ -45,6 +45,8 @@ public class Register extends AppCompatActivity {
             connection= DriverManager.getConnection(url,username,password);
 
         } catch (ClassNotFoundException | SQLException e) {
+            TextView errorStatusRegister =(TextView)findViewById(R.id.errorStatusRegister);
+            errorStatusRegister.setText("* Application is currently in maintenance, try again later.");
             Toast.makeText(this,"Database Server Down",Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
@@ -93,18 +95,15 @@ public class Register extends AppCompatActivity {
 
 
         /* Error Handling */
+        TextView errorStatusRegister =(TextView)findViewById(R.id.errorStatusRegister);
         if(userName.isEmpty() || userEmail.isEmpty() ||userPassword.isEmpty() ||userConfirmPassword.isEmpty()
         || userAddress.isEmpty() || userCity.isEmpty() || userCountry.isEmpty() || userAge.isEmpty() || userLastName.isEmpty() || userPhoneNumber.isEmpty())
         {
-            Toast.makeText(this,"Details Cannot Be Empty!",Toast.LENGTH_LONG).show();
+            errorStatusRegister.setText("* Please enter all the fields given below.");
         }
         else if(!userConfirmPassword.matches(userPassword) )
         {
-            Toast.makeText(this,"Password does not match!",Toast.LENGTH_LONG).show();
-        }
-        else if(Integer.parseInt(userAge)<18)
-        {
-            Toast.makeText(this,"Age Does Not Quality, 18+ Only! ",Toast.LENGTH_LONG).show();
+            errorStatusRegister.setText("* Confirm Password does not match with entered password.");
         }
         else if(connection!=null)
         {
@@ -120,7 +119,7 @@ public class Register extends AppCompatActivity {
                 preparedStatement.executeUpdate();
                 //Log.i("Statement",String.valueOf(preparedStatement.executeUpdate()));
                 preparedStatement.close();
-                Toast.makeText(this,"Registered Successfully!",Toast.LENGTH_LONG).show();
+                errorStatusRegister.setText("* User registered successfully.");
                 firstName.setText(null);
                 lastName.setText(null);
                 email.setText(null);
@@ -137,12 +136,12 @@ public class Register extends AppCompatActivity {
             catch(Exception e)
             {
                 e.printStackTrace();
-                Toast.makeText(this,"Email Already Exists",Toast.LENGTH_LONG).show();
+                errorStatusRegister.setText("* The email already exists within the system, try Sign In?");
             }
         }
         else
         {
-            Toast.makeText(this,"Internet Connection Failed!",Toast.LENGTH_LONG).show();
+            errorStatusRegister.setText("* Internet Connection Error, try restarting the application\"");
         }
 
     }
@@ -164,16 +163,17 @@ public class Register extends AppCompatActivity {
         TextView confirmPasswordText = (TextView) findViewById(R.id.confirmPasswordText);
 
         ImageView nextImage = (ImageView) findViewById(R.id.next);
+        TextView errorStatusRegister =(TextView)findViewById(R.id.errorStatusRegister);
 
 
         if(firstName.getText().toString().equals("") || lastName.getText().toString().equals("")
                 || email.getText().toString().equals("") || password.getText().toString().equals("") || confirmPassword.getText().toString().equals(""))
         {
-            Toast.makeText(this,"Enter Complete Details",Toast.LENGTH_LONG).show();
+            errorStatusRegister.setText("* Please enter all the fields given below.");
         }
         else if(!confirmPassword.getText().toString().equals(password.getText().toString()))
         {
-            Toast.makeText(this,"Password does not match!",Toast.LENGTH_LONG).show();
+            errorStatusRegister.setText("* Confirm Password does not match with entered password.");
         }
         else
         {

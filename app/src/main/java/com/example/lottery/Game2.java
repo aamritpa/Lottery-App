@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -185,11 +184,6 @@ public class Game2 extends AppCompatActivity {
             view.setBackgroundColor(Color.parseColor("#256B85"));
             countSelected=countSelected+1;
         }
-        else if(countSelected>=7)
-        {
-            Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
-
-        }
     }
     public void plusMinusDraw(View view)
     {
@@ -201,8 +195,6 @@ public class Game2 extends AppCompatActivity {
             {
                 totalDraws.setText(String.valueOf(Integer.parseInt(totalDraws.getText().toString())-1));
             }
-            Toast.makeText(this, (getResources().getResourceEntryName(view.getId())).toString(), Toast.LENGTH_SHORT).show();
-
         }
         else if(getResources().getResourceEntryName(view.getId()).equals("plus")){
             if(Integer.parseInt(totalDraws.getText().toString())<5)
@@ -318,10 +310,6 @@ public class Game2 extends AppCompatActivity {
             intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
             intent.putExtra("gameType","1"); //0 means game1, 1 means game2
             startActivity(intent);
-        }
-        else
-        {
-            Toast.makeText(this, "Select Minimum Numbers!", Toast.LENGTH_SHORT).show();
         }
     }
 

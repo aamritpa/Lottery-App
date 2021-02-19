@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
@@ -228,7 +227,6 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
             PreparedStatement preparedStatement = connection.prepareStatement(queryNumbersStatement);
             preparedStatement.executeUpdate();
             //Log.i("Statement",String.valueOf(preparedStatement.executeUpdate()));
-            Toast.makeText(this,"Successful",Toast.LENGTH_LONG).show();
             preparedStatement.close();
 
             Intent intent= new Intent(getApplicationContext(),Lottery.class);
@@ -237,13 +235,11 @@ public class Payment extends AppCompatActivity implements PaymentResultListener 
         catch(Exception e)
         {
             e.printStackTrace();
-            Toast.makeText(this,"Database Storage Failed",Toast.LENGTH_LONG).show();
         }
     }
 
     @Override
     public void onPaymentError(int i, String s) {
-        Toast.makeText(this, "Payment Failed", Toast.LENGTH_SHORT).show();
     }
 
     public void startPayment() {

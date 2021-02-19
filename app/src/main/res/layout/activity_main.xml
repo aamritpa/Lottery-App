@@ -11,12 +11,12 @@
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:background="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/errorStatusRegister">
 
 
         <TextView
@@ -318,14 +318,14 @@
         android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="28dp"
         android:background="#212A61"
         android:onClick="goToNext"
         android:padding="7sp"
         app:layout_constraintTop_toBottomOf="@+id/gridView"
         app:srcCompat="@drawable/rightarrow"
         app:tint="@android:color/white"
-        tools:layout_editor_absoluteX="142dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -337,5 +337,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc_vector_test" />
+
+    <TextView
+        android:id="@+id/errorStatusRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

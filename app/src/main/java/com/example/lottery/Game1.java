@@ -8,11 +8,11 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -187,11 +187,7 @@ public class Game1 extends AppCompatActivity {
             view.setBackgroundColor(Color.parseColor("#256B85"));
             countSelected=countSelected+1;
         }
-        else if(countSelected>=7)
-        {
-            Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
 
-        }
     }
 
     public void hideMenu(View view)
@@ -278,10 +274,6 @@ public class Game1 extends AppCompatActivity {
             view.setBackgroundColor(Color.parseColor("#256B85"));
             extraCount=extraCount+1;
         }
-        else if(extraCount>=3)
-        {
-            Toast.makeText(getApplicationContext(),"Maximum Numbers Selected",Toast.LENGTH_LONG).show();
-        }
     }
     public void plusMinusDraw(View view)
     {
@@ -293,8 +285,6 @@ public class Game1 extends AppCompatActivity {
             {
                 totalDraws.setText(String.valueOf(Integer.parseInt(totalDraws.getText().toString())-1));
             }
-            Toast.makeText(this, (getResources().getResourceEntryName(view.getId())).toString(), Toast.LENGTH_SHORT).show();
-
         }
         else if(getResources().getResourceEntryName(view.getId()).equals("plus")){
             if(Integer.parseInt(totalDraws.getText().toString())<5)
@@ -433,10 +423,6 @@ public class Game1 extends AppCompatActivity {
             intent.putExtra("totalDraws",Integer.valueOf(totalDraws.getText().toString()));
             intent.putExtra("gameType","0");//0 means this is game1, 1 means its game2
             startActivity(intent);
-        }
-        else
-        {
-            Toast.makeText(this, "Select Minimum Numbers!", Toast.LENGTH_SHORT).show();
         }
     }
 

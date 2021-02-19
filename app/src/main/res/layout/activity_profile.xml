@@ -113,7 +113,7 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:background="@android:color/white"
         android:onClick="passwordChange"
         android:text="Change your password"
@@ -122,21 +122,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saveProfile"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintTop_toBottomOf="@+id/errorStatusPasswordProfile"
+        app:layout_constraintVertical_bias="0.005" />
 
     <Button
         android:id="@+id/saveProfile"
         android:layout_width="175dp"
         android:layout_height="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:background="#4CBB17"
         android:onClick="saveProfile"
         android:text="SAVE"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/errorStatusProfile" />
 
     <TextView
         android:id="@+id/textView39"
@@ -263,5 +263,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
         tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/errorStatusProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout5" />
+
+    <TextView
+        android:id="@+id/errorStatusPasswordProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveProfile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
